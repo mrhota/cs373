@@ -1,0 +1,36 @@
+CS373: Quiz #8 (5 pts)
+
+--------------------------------------------------------------------------
+1. What is the first and simplest metric recommended?
+   [Ch. 18, Pg. 136]
+   (1 pt)
+
+a bar chart of completed vs. not completed stories
+
+--------------------------------------------------------------------------
+2. What is tracking?
+   [Ch. 20, Pg. 153]
+   (1 pt)
+
+a check to see how all the tasks are going
+
+--------------------------------------------------------------------------
+3. What is the output for the following?
+   [Stable Marriage Problem]
+   (2 pts)
+
+   1
+   4
+   1 1 2 3 4
+   2 1 2 3 4
+   3 1 2 3 4
+   4 1 2 3 4
+   1 4 3 2 1
+   2 3 2 1 4
+   3 2 1 4 3
+   4 1 4 3 2
+
+1 4
+2 3
+3 2
+4 1

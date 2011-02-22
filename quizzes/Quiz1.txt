@@ -1,0 +1,36 @@
+CS373: Quiz #1 (5 pts)
+
+--------------------------------------------------------------------------
+1. What was the last piece of advice?
+   [Advice for Computer Science College Students]
+   (1 pt)
+
+get a good summer internship
+
+--------------------------------------------------------------------------
+2. What does the following do in C?
+   [Advice for Computer Science College Students]
+   (1 pt)
+
+       while (*s++ = *t++);
+
+copies a string
+
+--------------------------------------------------------------------------
+3. What is the cycle length of 3?
+   [Collatz]
+   (1 pt)
+
+8
+
+--------------------------------------------------------------------------
+4. Which of the following is true? Maybe more than one.
+   [Collatz]
+   (1 pt)
+
+a. (n / 2),  with n even, always produces an even
+b. (n / 2),  with n even, always produces an odd
+c. (3n + 1), with n odd,  always produces an even
+d. (3n + 1), with n odd,  always produces an odd
+
+c.

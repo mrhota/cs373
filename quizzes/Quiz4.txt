@@ -1,0 +1,34 @@
+CS373: Quiz #4 (5 pts)
+
+--------------------------------------------------------------------------
+1. Which of the following practices demonstrates effective pair
+   programming?
+   [All I Really Needed to Know about Pair Programming I Learned in
+    Kindergarten]
+   (1 pt)
+
+a. Each partner writing separate parts.
+b. Each partner writing both parts and then submitting the best.
+c. Each partner writing both parts and then submitting the best
+   combination.
+d. Sharing a monitor and keyboard while coding.
+e. One partner writing the interface and tests, the other the
+   implementation.
+
+d.
+
+--------------------------------------------------------------------------
+2. In an XP project who owns the code and therefore has the right to
+   modify it?
+   [XP: Ch. 11, Pg. 75]
+   (2 pts)
+
+all the programmers
+
+--------------------------------------------------------------------------
+3. What is refactoring?
+   [XP: Ch. 11, Pg. 76]
+   (1 pt)
+
+the process of improving the code's structure while preserving its
+function

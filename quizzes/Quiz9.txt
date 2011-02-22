@@ -1,0 +1,32 @@
+CS373: Quiz #9 (5 pts)
+
+--------------------------------------------------------------------------
+1. What was the software bug?
+   [A bug and a Crash]
+   (1 pt)
+
+the conversion of a 64-bit number to a 16-bit number
+
+--------------------------------------------------------------------------
+2. What was the computer bug?
+   [Mariner 1]
+   (1 pt)
+
+the ommission of a hyphen
+
+--------------------------------------------------------------------------
+3. The first paper argues that, "The error in precision grows as the time
+   value increases, and the inaccuracy resulting from this is directly
+   proportional to the target’s velocity."
+   What does the second paper argue?
+   [Patriot Missile Software Problem]
+   [Roundoff Error and the Patriot Missile]
+   (2 pts)
+
+"At least one of these software modifications was the introduction of a
+subroutine for converting clock-time more accurately into floating-point.
+This calculation was needed in about half a dozen places in the program,
+but the call to the subroutine was not inserted at every point where it was
+needed. Hence, with a less accurate truncated time of one radar pulse being
+subtracted from a more accurate time of another radar pulse, the error no
+longer cancelled."

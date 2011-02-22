@@ -1,0 +1,521 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<body>
+<h3>Specification</h3>
+<hr />
+<p>Write a program to win the <a href="http://www.netflixprize.com/">Netflix Prize</a>.</p>
+
+<p>Ignore the <b>qualifying</b> data. It's just here for explanation.</p>
+
+<p>Just use the <b>probe</b> data, and see if you can meet or beat their <b>RMSE</b> of <b>0.9474</b>.</p>
+
+<h3>Input</h3>
+<hr />
+<h4>Training Data:</h4>
+<ul>
+<li>17,770 movies</li>
+<li>480,189 customers</li>
+<li>about 100,000,000 ratings</li>
+<li>about 5,600 ratings per movie</li>
+<li>about 200 ratings per customer</li>
+</ul>
+
+<h4>Qualifying Data:</h4>
+<ul>
+<li>2,836,401 ratings, no customers from training data</li>
+</ul>
+
+<h4>Probe Data:</h4>
+<ul>
+<li>1,425,333 ratings, all customers from training data</li>
+</ul>
+
+<h4>Files:</h4>
+<table border="1" cellspacing="0">
+<tr>
+<td><a href="http://www.cs.utexas.edu/users/downing/netflix/README">README</a></td>
+</tr>
+</table>
+<br />
+
+<table border="1" cellspacing="0">
+<tr>
+<td align="center" colspan="3">training_set/* (1.4 GB)<br /><a href="http://www.cs.utexas.edu/users/downing/netflix/training_set/mv_0002043.txt">training_set/mv_0002043.txt (162 KB)</a><br />17,770 files total</td>
+</tr>
+
+<tr bgcolor="#dddddd">
+<th>customer_id</th>
+<th>rating</th>
+<th>rating_date</th>
+</tr>
+
+<tr bgcolor="#dddddd">
+<th>1 - 2,649,429<br />with gaps<br />480,189 total</th>
+<th>1 - 5</th>
+<th>Oct 1998 - Dec 2005<br />YYYY-MM-DD</th>
+</tr>
+
+<tr>
+<td colspan="3">2043:</td>
+</tr>
+
+<tr>
+<td align="center" colspan="3">...</td>
+</tr>
+
+<tr>
+<td>1417435</td>
+<td>3</td>
+<td>2005-12-14</td>
+</tr>
+
+<tr>
+<td align="center" colspan="3">...</td>
+</tr>
+
+<tr>
+<td>2312054</td>
+<td>1</td>
+<td>2004-12-21</td>
+</tr>
+
+<tr>
+<td align="center" colspan="3">...</td>
+</tr>
+
+<tr>
+<td>462685</td>
+<td>4</td>
+<td>2005-07-21</td>
+</tr>
+
+<tr>
+<td align="center" colspan="3">...</td>
+</tr>
+
+<tr>
+<td align="center" colspan="3">7,872 records total</td>
+</tr>
+</table>
+<br />
+
+<table border="1" cellspacing="0">
+<tr>
+<td align="center" colspan="3"><a href="http://www.cs.utexas.edu/users/downing/netflix/movie_titles.txt">movie_titles.txt (578 KB)</a></td>
+</tr>
+
+<tr bgcolor="#dddddd">
+<th>movie_id</th>
+<th>movie_year</th>
+<th>movie_title</th>
+</tr>
+
+<tr bgcolor="#dddddd">
+<th>1 - 17,770</th>
+<th>1890 - 2005</th>
+<th></th>
+</tr>
+
+<tr>
+<td align="center" colspan="3">...</td>
+</tr>
+
+<tr>
+<td>2043</td>
+<td>1953</td>
+<td>Shane</td>
+</tr>
+
+<tr>
+<td align="center" colspan="3">...</td>
+</tr>
+
+<tr>
+<td>10851</td>
+<td>1948</td>
+<td>Red River</td>
+</tr>
+
+<tr>
+<td align="center" colspan="3">...</td>
+</tr>
+
+<tr>
+<td>16306</td>
+<td>1960</td>
+<td>Spartacus</td>
+</tr>
+
+<tr>
+<td align="center" colspan="3">...</td>
+</tr>
+
+<tr>
+<td align="center" colspan="3">17,770 records total</td>
+</tr>
+</table>
+<br />
+
+<table border="1" cellspacing="0">
+<tr>
+<td align="center" colspan="2"><a href="http://www.cs.utexas.edu/users/downing/netflix/qualifying.txt">qualifying.txt (52.5 MB)</a></td>
+</tr>
+
+<tr bgcolor="#dddddd">
+<th>customer_id</th>
+<th>rating_date</th>
+</tr>
+
+<tr bgcolor="#dddddd">
+<th>1 - 2,649,429<br />with gaps<br />480,189 total</th>
+<th>Oct 1998 - Dec 2005<br />YYYY-MM-DD</th>
+</tr>
+
+<tr>
+<td align="center" colspan="2">...</td>
+</tr>
+
+<tr>
+<td colspan="2">2043:</td>
+</tr>
+
+<tr>
+<td>2012320</td>
+<td>2005-06-07</td>
+</tr>
+
+<tr>
+<td>436529</td>
+<td>2005-12-28</td>
+</tr>
+
+<tr>
+<td>843246</td>
+<td>2005-12-15</td>
+</tr>
+
+<tr>
+<td align="center" colspan="2">...</td>
+</tr>
+
+<tr>
+<td align="center" colspan="3">2,836,401 records total</td>
+</tr>
+</table>
+<br />
+
+<table border="1" cellspacing="0">
+<tr>
+<td align="center"><a href="http://www.cs.utexas.edu/users/downing/netflix/probe.txt">probe.txt (10.8 MB)</a><br />RMSE = 0.9474</td>
+</tr>
+
+<tr bgcolor="#dddddd">
+<th>customer_id</th>
+</tr>
+
+<tr bgcolor="#dddddd">
+<th>1 - 2,649,429<br />with gaps<br />480,189 total</th>
+</tr>
+
+<tr>
+<td align="center">...</td>
+</tr>
+
+<tr>
+<td>2043:</td>
+</tr>
+
+<tr>
+<td>1417435</td>
+</tr>
+
+<tr>
+<td>2312054</td>
+</tr>
+
+<tr>
+<td>462685</td>
+</tr>
+
+<tr>
+<td align="center">...</td>
+</tr>
+
+<tr>
+<td align="center">1,425,333 records total</td>
+</tr>
+</table>
+
+<h3>Output</h3>
+<hr />
+
+<h4>RMSE:</h4>
+<p>See if you can meet or beat their <b>0.9474</b>.</p>
+
+<h4>Files:</h4>
+<table border="1" cellspacing="0">
+<tr bgcolor="#dddddd">
+<th colspan="2">RunNetflix.out</th>
+</tr>
+
+<tr bgcolor="#dddddd">
+<th>rating</th>
+</tr>
+
+<tr bgcolor="#dddddd">
+<th>1.0 - 5.0</th>
+</tr>
+
+<tr>
+<td align="center">...</td>
+</tr>
+
+<tr>
+<td>2043:</td>
+</tr>
+
+<tr>
+<td>3.4</td>
+</tr>
+
+<tr>
+<td>4.1</td>
+</tr>
+
+<tr>
+<td>1.9</td>
+</tr>
+
+<tr>
+<td align="center">...</td>
+</tr>
+
+<tr>
+<td align="center">1,425,333 records total</td>
+</tr>
+</table>
+
+<p>
+CS371p: <b>C++</b> only.<br />
+CS373: <b>Python</b> only.
+</p>
+
+<h3>Analysis</h3>
+<hr />
+<p>These are additional descriptions of the underlying math:</p>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Mean_squared_error">Mean Square Error</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Netflix_Prize">Netflix Prize</a></li>
+<li><a href="http://www.scientificblogging.com/random_walk/predicting_movie_ratings_math_won_netflix_prize">Predicting Movie Ratings</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Root_mean_square_deviation">Root Mean Square Deviation</a></li>
+<li><a href="https://github.com/gpdowning/cs371p/blob/master/projects/other/netflix/RMSE.c++">RMSE.c++</a></li>
+<li><a href="https://github.com/gpdowning/cs373/blob/master/projects/other/netflix/RMSE.py">RMSE.py</a></li>
+</ul>
+
+<h3>Assembla IDs</h3>
+<hr />
+<p>
+Glenn: <b>gpdowning</b><br />
+Ebrahim (CS371p): <b>cs371pta</b><br />
+Arun (CS373-11am): <b>seehra.a</b><br />
+Alex (CS373-1pm): <b>alexloh80</b>
+</p>
+
+<h3>CS371p Assembla Repositories</h3>
+<hr />
+<p>
+Private Repository: cs371p-netflix-<b>turnin-id</b><br />
+<br />
+
+Public Repository: <a href="https://www.assembla.com/code/cs371p-tests/git/nodes?rev=master">cs371p-tests</a><br />
+Acceptance Tests: cs371p-tests/netflix/RunNetflix-<b>turnin-id</b>.out<br />
+Unit Tests: cs371p-tests/netflix/TestNetflix-<b>turnin-id</b>.c++<br />
+</p>
+
+<h3>CS373-11am Assembla Repositories</h3>
+<hr />
+<p>
+Private Repository: cs373-11am-netflix-<b>turnin-id</b><br />
+<br />
+
+Public Repository: <a href="https://www.assembla.com/code/cs373-11am-tests/git/nodes?rev=master">cs373-11am-tests</a><br />
+Acceptance Tests: cs373-11am-tests/netflix/RunNetflix-<b>turnin-id</b>.out<br />
+Unit Tests: cs373-11am-tests/netflix/TestNetflix-<b>turnin-id</b>.py<br />
+</p>
+
+<h3>CS373-1pm Assembla Repositories</h3>
+<hr />
+<p>
+Private Repository: cs373-1pm-netflix-<b>turnin-id</b><br />
+<br />
+
+Public Repository: <a href="https://www.assembla.com/code/cs373-1pm-tests/git/nodes?rev=master">cs373-1pm-tests</a><br />
+Acceptance Tests: cs373-1pm-tests/netflix/RunNetflix-<b>turnin-id</b>.out<br />
+Unit Tests: cs373-1pm-tests/netflix/TestNetflix-<b>turnin-id</b>.py<br />
+</p>
+
+<h3>Google Forms</h3>
+<hr />
+<p>
+Ebrahim (CS371p)<br />
+Arun (CS373-11am)<br />
+Alex (CS373-1pm)
+</p>
+
+<h3>Turnin IDs</h3>
+<hr />
+<p>
+Ebrahim (CS371p): <b>cs371ppj3 / ebrahim</b><br />
+Arun (CS373-11am): <b>cs373pj3 / aseehra</b><br />
+Alex (CS373-1pm): <b>cs373pj3 / alexloh</b><br />
+Filename: <b>Netflix.zip</b>
+</p>
+
+<h3>Issues and Submission</h3>
+<hr />
+<table border="1" cellspacing="0">
+<tr bgcolor="#dddddd">
+<th>Points</th>
+<th>Description</th>
+<th>Files</th>
+<th>Submission</th>
+</tr>
+
+<tr>
+<th align="center">5</th>
+<td>
+<a href="http://code.google.com/hosting/">Google Project</a> <b>issue tracker</b><br />
+Track the following issues and any bugs in the <b>Google Project issue tracker</b>.<br />
+Post the <b>URL</b> to <b>Blackboard</b>.
+</td>
+<td></td>
+<td>
+Google Project<br />
+Blackboard
+</td>
+</tr>
+
+<tr>
+<th align="center">5</th>
+<td>
+<a href="http://www.assembla.com/">Assembla</a> <a href="http://www.git-scm.com/">Git</a> <b>source control system</b><br />
+Invite the TA (ID above) to your repository.<br />
+Create a <b>log</b> of the commits.<br />
+There should be <b>several</b> commits.<br />
+It is <b>your</b> responsibility to protect your code from the rest of the students in the class.<br />
+If your code gets out, <b>you</b> are as guilty as the recipient of <b>academic dishonesty</b>.
+</td>
+<td>Netflix.log</td>
+<td>
+Assembla (<i>private</i>)<br />
+Turnin (<i>zip</i>)
+</td>
+</tr>
+
+<tr>
+<th align="center">5</th>
+<td>
+<b>acceptance tests</b><br />
+The <b>input</b> is guaranteed to be <b>correct</b>.<br />
+An initial set of tests is provided that may or may not be correct.<br />
+Post the tests to the TA public repository (ID above).<br />
+Reach consensus on the tests.<br />
+<b>C++:</b> Use <b>Valgrind</b>.
+</td>
+<td>
+RunNetflix.c++<br />
+RunNetflix.py<br />
+RunNetflix.out
+</td>
+<td>
+Assembla (<i>private</i>)<br />
+Assembla (<i>public</i>)<br />
+Turnin (<i>zip</i>)
+</td>
+</tr>
+
+<tr>
+<th align="center">5</th>
+<td>
+<b>unit tests</b><br />
+Create a set of <b>unit</b> tests.<br />
+An initial set of tests is provided that may or may not be correct.<br />
+Add <b>many</b> more tests.<br />
+Post the tests to the TA public repository (ID above).<br />
+Reach consensus on the tests.<br />
+<b>C++:</b> Use <b>Valgrind</b>.
+</td>
+<td>
+TestNetflix.c++<br />
+TestNetflix.py<br />
+TestNetflix.out
+</td>
+<td>
+Assembla (<i>private</i>)<br />
+Assembla (<i>public</i>)<br />
+Turnin (<i>zip</i>)
+</td>
+</tr>
+
+<tr>
+<th align="center">20</th>
+<td>
+<b>implementation</b><br />
+Use <b>assert</b> to check <b>pre-conditions</b>, <b>post-conditions</b>,<br /><b>argument validity</b>, <b>return-value validity</b>, and <b>invariants</b>.<br />
+Worry about this <b>last</b>, but your program should run<br />as <b>fast</b> as possible and use as <b>little</b> memory as possible.
+</td>
+<td>
+Netflix.h<br />
+Netflix.py
+</td>
+<td>
+Assembla (<i>private</i>)<br />
+Turnin (<i>zip</i>)
+</td>
+</tr>
+
+<tr>
+<th align="center">5</th>
+<td>
+<b>documentation</b><br />
+<b>C++:</b> Use <b>Doxygen</b> to document the <b>interfaces</b>.<br />
+<b>Python:</b> Use <b>pydoc</b> to document the <b>interfaces</b>.<br />
+The above documentation only needs to be generated from <b>Netflix.[h | py]</b>.<br />
+Use comments <b>only</b> if you need to explain the <b>why</b> of a particular implementation.<br />
+Choose a coding convention and be consistent.<br />
+Use good variable names.<br />
+Write readable code with good indentation, blank lines, and blank spaces.
+</td>
+<td>
+html-c++/*<br />
+html-py/*
+</td>
+<td>
+Assembla (<i>private</i>)<br />
+Turnin (<i>zip</i>)
+</td>
+</tr>
+
+<tr>
+<th align="center">5</th>
+<td>
+<a href="http://code.google.com/hosting/">Google Project</a> <b>wiki</b><br />
+Describe the algorithm and any optimizations (e.g. cache).
+</td>
+<td></td>
+<td>Google Project</td>
+</tr>
+
+<tr>
+<th>5</th>
+<td>
+<b>overview</b><br />
+Fill out the overview.
+</td>
+<td></td>
+<td>Google Form</td>
+</tr>
+</table>
+</body>
+</html>

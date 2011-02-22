@@ -1,0 +1,23 @@
+CS373: Quiz #7 (5 pts)
+
+--------------------------------------------------------------------------
+1. What is test-first programming?
+   [XP: Ch. 14, Pg. 108]
+   (1 pt)
+
+write new code only when you have a test that doesn't work
+
+--------------------------------------------------------------------------
+2. What is programming by intention?
+   [XP: Ch. 14, Pg. 108]
+   (1 pt)
+
+code what you want, not how to do it
+
+--------------------------------------------------------------------------
+3. What are the two most common problems with releasing changes?
+   [XP: Ch. 15, Pg. 124-125]
+   (2 pts)
+
+slow merges
+lost changes
