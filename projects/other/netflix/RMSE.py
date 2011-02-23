@@ -4,8 +4,6 @@
 # RMSE.py
 # -------
 
-import math
-
 print "RMSE.py"
 
 def rmse (a, p) :
@@ -17,14 +15,14 @@ def rmse (a, p) :
     w = 0
     while i != s :
         v = a[i] - float(p[i])
-        w += (v * v)
+        w += (v ** 2)
         i += 1
     assert type(w) is float
     assert 0 <= w <= (16 * s)
     m = (w / s)
     assert type(m) is float
     assert 0 <= m <= 16
-    r = math.sqrt(m)
+    r = (m ** .5)
     assert type(r) is float
     assert 0 <= r <= 4
     return r
