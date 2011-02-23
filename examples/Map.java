@@ -3,6 +3,8 @@
 // --------
 
 import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
 
 interface UnaryFunction<T> {
     T call (T x);}
@@ -20,6 +22,12 @@ final class Map {
         final T[] x = (T[]) new Object[a.length];            // warning: [unchecked] unchecked cast
         for (int i = 0; i != a.length; ++i)
             x[i] = uf.call(a[i]);
+        return x;}
+
+    public static <T> List<T> map (UnaryFunction<T> uf, List<T> a) {
+        final List<T> x = new ArrayList<T>(a.size());
+        for (int i = 0; i != a.size(); ++i)
+            x.set(i, uf.call(a.get(i)));
         return x;}
 
     public static void main (String[] args) {
