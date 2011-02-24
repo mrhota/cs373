@@ -4,9 +4,13 @@
 # Map.py
 # ------
 
-import math
-
 print "Map.py"
+
+def square (n) :
+    return n ** 2;
+
+def cube (n) :
+    return n ** 3;
 
 def map_1 (uf, a) :
     if not a :
@@ -17,7 +21,7 @@ def map_2 (uf, a) :
     i = 0
     s = len(a)
     x = []
-    while i < s :
+    while i != s :
         x.append(uf(a[i]))
         i += 1
     return x
@@ -42,12 +46,11 @@ def map_5 (uf, a) :
     return [uf(v) for v in a]
 
 def test (f) :
-    x = []
-    y = (4, 9, 16)
-    z = [2, 3,  4]
-
-    assert f(math.sqrt, x) == x
-    assert f(math.sqrt, y) == z
+    a = [2,  3,  4]
+    b = [4,  9, 16]
+    c = [8, 27, 64]
+    assert f(square, a) == b
+    assert f(cube,   a) == c
 
 test(map)
 test(map_1)

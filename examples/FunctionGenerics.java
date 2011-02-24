@@ -41,7 +41,7 @@ final class FunctionGenerics {
         assert Integer.class.getInterfaces()[0] == Comparable.class;
         assert  String.class.getInterfaces()[1] == Comparable.class;
         assert       A.class.getInterfaces()[0] == Comparable.class;
-        assert       B.class.getSuperclass()    ==          A.class;
+        assert       B.class.getInterfaces()[0] == Comparable.class;
 
         assert max1(2, 3) == 3;
         assert max2(2, 3) == 3;

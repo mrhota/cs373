@@ -7,11 +7,16 @@
 assert   :: Bool     -> a    -> a
 map      :: (a -> b) -> [a]  -> [b]
 putStrLn :: String           -> IO ()
-sqrt     :: a                -> a
 return   :: a                -> IO a
 -}
 
 import Control.Exception (assert)
+
+square :: Int -> Int
+square n = n * n
+
+cube :: Int -> Int
+cube n = n * n * n
 
 map_1 :: (a -> b) -> [a] -> [b]
 map_1 _  []       = []
@@ -20,15 +25,14 @@ map_1 uf (x : xs) = uf x : map_1 uf xs
 map_2 :: (a -> b) -> [a] -> [b]
 map_2 uf a = [uf v | v <- a]
 
-test :: ((Double -> Double) -> [Double] -> [Double]) -> IO ()
+test :: ((Int -> Int) -> [Int] -> [Int]) -> IO ()
 test f =
-    let x, y, z :: [Double]
-        x = []
-        y = [4, 9, 16]
-        z = [2, 3,  4]
-
-    in assert ((f sqrt x) == x) return () >>
-       assert ((f sqrt y) == z) return ()
+    let a, b, c :: [Int]
+        a = [2,  3,  4]
+        b = [4,  9, 16]
+        c = [8, 27, 64]
+    in assert ((f square a) == b) return () >>
+       assert ((f cube   a) == c) return ()
 
 main :: IO ()
 main =

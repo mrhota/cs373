@@ -15,6 +15,10 @@ data A a =
     A Int Double a
     deriving (Eq)
 
+data Color =
+    Red | Blue | Green
+    deriving (Eq)
+
 main :: IO ()
 main =
     putStrLn "Types.hs" >>
@@ -70,5 +74,9 @@ main =
     let inc :: Int -> Int
         inc n = n + 1
     in assert ((inc 2) == 3) return ()  >>
+
+    let cl :: Color
+        cl = Red
+    in assert (cl == Red) return () >>
 
     putStrLn "Done."
