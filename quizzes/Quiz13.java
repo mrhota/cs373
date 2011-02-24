@@ -5,6 +5,23 @@ CS373: Quiz #13 (5 pts)
 """
 
 """ ----------------------------------------------------------------------
+3. What is the multiplicity of an association?
+   [Associations]
+   (2 pts)
+
+how many instances of a class are connected to an instance of another
+class
+"""
+
+""" ----------------------------------------------------------------------
+1. What is the difference between a surrogate key and a substitute key?
+   [Keys]
+   (1 pt)
+
+substitute keys have some descriptive value
+"""
+
+""" ----------------------------------------------------------------------
 1. What is the domain of an attribute?
    [Classes & Schemes]
    (1 pt)
