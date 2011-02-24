@@ -13,10 +13,10 @@ return   :: a                -> IO a
 import Control.Exception (assert)
 
 square :: Int -> Int
-square n = n * n
+square n = n ^ (2 :: Int)
 
 cube :: Int -> Int
-cube n = n * n * n
+cube n = n ^ (3 :: Int)
 
 map_1 :: (a -> b) -> [a] -> [b]
 map_1 _  []       = []
