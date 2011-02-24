@@ -18,12 +18,12 @@ square n = n ^ (2 :: Int)
 cube :: Int -> Int
 cube n = n ^ (3 :: Int)
 
-map_1 :: (a -> b) -> [a] -> [b]
-map_1 _  []       = []
-map_1 uf (x : xs) = uf x : map_1 uf xs
+map1 :: (a -> b) -> [a] -> [b]
+map1 _  []       = []
+map1 uf (x : xs) = uf x : map1 uf xs
 
-map_2 :: (a -> b) -> [a] -> [b]
-map_2 uf a = [uf v | v <- a]
+map2 :: (a -> b) -> [a] -> [b]
+map2 uf a = [uf v | v <- a]
 
 test :: ((Int -> Int) -> [Int] -> [Int]) -> IO ()
 test f =
@@ -39,7 +39,7 @@ main =
     putStrLn "Map.hs" >>
 
     test map   >>
-    test map_1 >>
-    test map_2 >>
+    test map1 >>
+    test map2 >>
 
     putStrLn "Done."

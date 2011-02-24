@@ -1,0 +1,50 @@
+#!/usr/bin/env python
+
+# ---------
+# Reduce.py
+# ---------
+
+import operator
+
+print "Reduce.py"
+
+def reduce1 (bf, a, v) :
+    if not a :
+        return v
+    return reduce2(bf, a[1:], bf(v, a[0]))
+
+def reduce2 (bf, a, v) :
+    i = 0
+    s = len(a)
+    while i != s :
+        v = bf(v, a[i])
+        i += 1
+    return v
+
+def reduce3 (bf, a, v) :
+    i = iter(a)
+    while True :
+        try :
+            w = i.next()
+            v = bf(v, w)
+        except StopIteration :
+            break
+    return v
+
+def reduce4 (bf, a, v) :
+    for w in a :
+        v = bf(v, w)
+    return v
+
+def test (f) :
+    a = [2, 3, 4]
+    assert f(operator.add, a, 0) ==  9
+    assert f(operator.mul, a, 1) == 24
+
+test(reduce)
+test(reduce1)
+test(reduce2)
+test(reduce3)
+test(reduce4)
+
+print "Done."

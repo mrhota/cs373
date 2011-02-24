@@ -12,12 +12,12 @@ def square (n) :
 def cube (n) :
     return n ** 3;
 
-def map_1 (uf, a) :
+def map1 (uf, a) :
     if not a :
         return []
-    return [uf(a[0])] + map_1(uf, a[1:])
+    return [uf(a[0])] + map1(uf, a[1:])
 
-def map_2 (uf, a) :
+def map2 (uf, a) :
     i = 0
     s = len(a)
     x = []
@@ -26,7 +26,7 @@ def map_2 (uf, a) :
         i += 1
     return x
 
-def map_3 (uf, a) :
+def map3 (uf, a) :
     i = iter(a)
     x = []
     while True :
@@ -36,13 +36,13 @@ def map_3 (uf, a) :
             break
     return x
 
-def map_4 (uf, a) :
+def map4 (uf, a) :
     x = []
     for v in a :
         x.append(uf(v))
     return x
 
-def map_5 (uf, a) :
+def map5 (uf, a) :
     return [uf(v) for v in a]
 
 def test (f) :
@@ -53,10 +53,10 @@ def test (f) :
     assert f(cube,   a) == c
 
 test(map)
-test(map_1)
-test(map_2)
-test(map_3)
-test(map_4)
-test(map_5)
+test(map1)
+test(map2)
+test(map3)
+test(map4)
+test(map5)
 
 print "Done."
