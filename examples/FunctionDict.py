@@ -4,11 +4,11 @@
 # FunctionDict.py
 # ---------------
 
-print "FunctionDict.py"
-
 def f (x, y, **z) :
     assert type(z) is dict
     return [x, y, z]
+
+print "FunctionDict.py"
 
 assert f(2, 3)               == [2, 3, {}]
 assert f(2, 3, a = 4)        == [2, 3, {'a' : 4}]

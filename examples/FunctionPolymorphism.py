@@ -6,8 +6,6 @@
 
 # parametric run-time polymorphism
 
-print "FunctionPolymorphism.py"
-
 class A (object) :
     def __init__ (self, n) :
         self.n = n
@@ -22,6 +20,8 @@ def my_max (x, y) :
     if x < y :
         return y
     return x
+
+print "FunctionPolymorphism.py"
 
 assert hasattr(int,   "__lt__")
 assert hasattr(float, "__lt__")

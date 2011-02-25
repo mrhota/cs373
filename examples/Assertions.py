@@ -9,10 +9,10 @@ Turn OFF assertions at run time with -O.
 % python -O Assertions.py
 """
 
-print "Assertions.py"
-
 def inc (v) :
     return v + 1
+
+print "Assertions.py"
 
 assert inc(2) == 3
 assert inc(2) == 4

@@ -4,8 +4,6 @@
 # Map.py
 # ------
 
-print "Map.py"
-
 def square (n) :
     return n ** 2;
 
@@ -51,6 +49,8 @@ def test (f) :
     c = [8, 27, 64]
     assert f(square, a) == b
     assert f(cube,   a) == c
+
+print "Map.py"
 
 test(map)
 test(map1)

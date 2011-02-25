@@ -6,8 +6,6 @@
 
 import operator
 
-print "Reduce.py"
-
 def reduce1 (bf, a, v) :
     if not a :
         return v
@@ -40,6 +38,8 @@ def test (f) :
     a = [2, 3, 4]
     assert f(operator.add, a, 0) ==  9
     assert f(operator.mul, a, 1) == 24
+
+print "Reduce.py"
 
 test(reduce)
 test(reduce1)

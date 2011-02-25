@@ -18,11 +18,11 @@ square n = n ^ (2 :: Int)
 cube :: Int -> Int
 cube n = n ^ (3 :: Int)
 
-map1 :: (a -> b) -> [a] -> [b]
+map1 :: (a -> a) -> [a] -> [a]
 map1 _  []       = []
 map1 uf (x : xs) = uf x : map1 uf xs
 
-map2 :: (a -> b) -> [a] -> [b]
+map2 :: (a -> a) -> [a] -> [a]
 map2 uf a = [uf v | v <- a]
 
 test :: ((Int -> Int) -> [Int] -> [Int]) -> IO ()

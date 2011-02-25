@@ -4,13 +4,13 @@
 # FunctionParallel.py
 # -------------------
 
-print "FunctionParallel.py"
-
 def f ((x, y), z) :
     return [x, y, z]
 
 #def g ([x, y], z) :  # SyntaxError: invalid syntax
 #    return [x, y, z]
+
+print "FunctionParallel.py"
 
 #f(2, 3, 4)                                      # TypeError: f() takes exactly 1 argument (3 given)
 #f((2,), 3, 4)                                   # ValueError: need more than 2 values to unpack

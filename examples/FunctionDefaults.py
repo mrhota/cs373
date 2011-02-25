@@ -4,8 +4,6 @@
 # FunctionDefaults.py
 # -------------------
 
-print "FunctionDefaults.py"
-
 def f (x, y, z = 4) : # trailing arguments
     return [x, y, z]
 
@@ -23,6 +21,8 @@ def h2 (y = None) :
     assert type(y) is list
     y += [2]
     return y
+
+print "FunctionDefaults.py"
 
 assert f(2, 3)    == [2, 3, 4]
 assert f(2, 3, 5) == [2, 3, 5]

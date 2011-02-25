@@ -4,8 +4,6 @@
 # Selection.py
 # ------------
 
-print "Selection.py"
-
 def f (n) :
     if n < 0 :   # statement
         m = -1
@@ -17,6 +15,8 @@ def f (n) :
 
 def g (n) :
     return -1 if (n < 0) else (1 if (n > 0) else 0) # expression
+
+print "Selection.py"
 
 assert f(-2) == -1
 assert f( 0) ==  0

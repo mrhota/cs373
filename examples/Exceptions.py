@@ -4,12 +4,12 @@
 # Exceptions.py
 # -------------
 
-print "Exceptions.py"
-
 def f (b) :
     if b :
         raise NameError("abc")
     return 0
+
+print "Exceptions.py"
 
 try :
     assert f(False) == 0

@@ -1,72 +1,58 @@
-#!/usr/bin/env python
-
-"""
+/*
 CS373: Quiz #13 (5 pts)
-"""
+*/
 
-""" ----------------------------------------------------------------------
-3. What is the multiplicity of an association?
+/* -----------------------------------------------------------------------
+1. What is the multiplicity of an association?
    [Associations]
-   (2 pts)
+   (1 pt)
 
 how many instances of a class are connected to an instance of another
 class
-"""
+*/
 
-""" ----------------------------------------------------------------------
-1. What is the difference between a surrogate key and a substitute key?
+/* -----------------------------------------------------------------------
+2. What is the difference between a surrogate key and a substitute key?
    [Keys]
    (1 pt)
 
 substitute keys have some descriptive value
-"""
+*/
 
-""" ----------------------------------------------------------------------
-1. What is the domain of an attribute?
-   [Classes & Schemes]
-   (1 pt)
-
-legal values that may be assigned to it
-"""
-
-""" ----------------------------------------------------------------------
-2. What is a primary key?
-   [Rows & Tables]
-   (1 pt)
-
-a unique identifier for each row
-"""
-
-""" ----------------------------------------------------------------------
-3. What is the output of the following program?
+/* -----------------------------------------------------------------------
+3. Does max1() or max2() fail to compile in the following?
    (2 pts)
 
-sqrt((4 + 0 + 4) / 3)
-sqrt(8 / 3)
-1.63299
-"""
+max1() fails in the 2nd
+max2() always compiles
+*/
 
-import math
+class A implements Comparable<A> {
+    ...}
 
-def rmse (a, p) :
-    assert type(a) == tuple
-    assert type(p) == tuple
-    assert len(a)  == len(p)
-    i = 0
-    s = len(a)
-    w = 0
-    while i != s :
-        v = a[i] - float(p[i])
-        w += (v ** 2)
-        i += 1
-    assert type(w) is float
-    assert 0 <= w <= (16 * s)
-    m = (w / s)
-    assert type(m) is float
-    assert 0 <= m <= 16
-    r = (m ** .5) # math.sqrt(m)
-    assert type(r) is float
-    assert 0 <= r <= 4
-    return r
+class B extends A {
+    ...}
 
-print rmse((1, 2, 3), (3, 2, 1))
+class Test {
+    public static <T extends Comparable<T>> T max1 (T x, T y) {
+        if (x.compareTo(y) < 0)
+            return y;
+        return x;}
+
+    public static <T extends Comparable<? super T>> T max2 (T x, T y) {
+        if (x.compareTo(y) < 0)
+            return y;
+        return x;}
+
+    public static void main (String[] args) {
+        A x = new A(...);
+        A y = new A(...);
+        assert max(x, y) == y;
+
+        B x = new B(...);
+        B y = new B(...);
+        assert max(x, y) == y;
+
+        A x = new B(...);
+        A y = new B(...);
+        assert max(x, y) == y;}}

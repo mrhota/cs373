@@ -4,11 +4,11 @@
 # FunctionTuple.py
 # ----------------
 
-print "FunctionTuple.py"
-
 def f (x, y, *z) :
     assert type(z) is tuple
     return [x, y, z]
+
+print "FunctionTuple.py"
 
 assert f(2, 3)       == [2, 3, ()]
 assert f(2, 3, 4)    == [2, 3, (4,)]

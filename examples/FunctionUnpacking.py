@@ -4,10 +4,11 @@
 # FunctionUnpacking.py
 # --------------------
 
-print "FunctionUnpacking.py"
 
 def f (x, y, z) :
     return [x, y, z]
+
+print "FunctionUnpacking.py"
 
 assert f(2, 3, 4)     == [2, 3, 4]
 #assert f(2, 3)       == None)     # TypeError: f() takes exactly 3 arguments (2 given
