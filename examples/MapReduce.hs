@@ -23,11 +23,11 @@ cube :: Int -> Int
 cube n = n ^ (3 :: Int)
 
 map_reduce_1 :: (a -> a -> a) -> (a -> a) -> a -> [a] -> a
-map_reduce_1 _  _  v []       = v
-map_reduce_1 bf uf v (x : xs) = map_reduce_1 bf uf (bf v (uf x)) xs
+map_reduce_1 bf uf v a = foldl bf v (map uf a)
 
 map_reduce_2 :: (a -> a -> a) -> (a -> a) -> a -> [a] -> a
-map_reduce_2 bf uf v a = foldl bf v (map uf a)
+map_reduce_2 _  _  v []       = v
+map_reduce_2 bf uf v (x : xs) = map_reduce_2 bf uf (bf v (uf x)) xs
 
 test1 :: ((Int -> Int -> Int) -> (Int -> Int) -> Int -> [Int] -> Int) -> IO ()
 test1 f =
@@ -40,15 +40,20 @@ test1 f =
 
 test2 :: ((Int -> Int -> Int) -> (Int -> Int) -> Int -> [Int] -> Int) -> IO ()
 test2 f =
-    getCPUTime                                        >>=
-    (\s ->
-        print f                                   >>
-        getCPUTime                                >>=
-        (\t ->
-            let d :: Double
-                d = (fromIntegral (t - s)) / cpms
-            in putStr (show d)))                      >>
-    putStrLn " milliseconds"                          >>
+    let a :: [Int]
+        a = replicate 100000 1
+    in getCPUTime >>=
+       (\s ->
+           print (f (+) square 0 a) >>
+           print (f (+) cube   0 a) >>
+           print (f (*) square 1 a) >>
+           print (f (*) cube   1 a) >>
+           getCPUTime               >>=
+           (\t ->
+               let d :: Double
+                   d = (fromIntegral (t - s)) / cpms
+               in putStr (show d))) >>
+       putStrLn " milliseconds"
 
 main :: IO ()
 main =
@@ -56,8 +61,58 @@ main =
 
     test1 map_reduce_1 >>
     test1 map_reduce_2 >>
+    putStrLn ""        >>
 
-    test2 map_reduce_1 >>
-    test2 map_reduce_2 >>
+    putStrLn "map_reduce_1" >>
+    test2 map_reduce_1      >>
+    putStrLn ""             >>
+
+    putStrLn "map_reduce_2" >>
+    test2 map_reduce_2      >>
+    putStrLn ""             >>
 
     putStrLn "Done."
+
+{-
+Glasgow Haskell Compiler, Version 6.12.1, for Haskell 98, stage 2 booted by GHC version 6.10.4
+
+MapReduce.hs
+
+map_reduce_1
+100000
+100000
+1
+1
+245.496 milliseconds
+
+map_reduce_2
+100000
+100000
+1
+1
+276.291 milliseconds
+
+Done.
+-}
+
+{-
+Glasgow Haskell Compiler, Version 6.12.1, for Haskell 98, stage 2 booted by GHC version 6.12.1
+
+MapReduce.hs
+
+map_reduce_1
+100000
+100000
+1
+1
+236.015 milliseconds
+
+map_reduce_2
+100000
+100000
+1
+1
+252.015 milliseconds
+
+Done.
+-}
