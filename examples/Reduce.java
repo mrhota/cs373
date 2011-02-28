@@ -14,7 +14,7 @@ final class Plus implements BinaryFunction<Integer> {
     public Integer call (Integer x, Integer y) {
         return x + y;}}
 
-final class Multiply implements BinaryFunction<Integer> {
+final class Multiplies implements BinaryFunction<Integer> {
     public Integer call (Integer x, Integer y) {
         return x * y;}}
 
@@ -27,11 +27,6 @@ final class Reduce {
     public static <T> T reduce1 (BinaryFunction<T> bf, T[] a, T v) {
         for (int i = 0; i != a.length; ++i)
             v = bf.call(v, a[i]);
-        return v;}
-
-    public static <T> T reduce1 (BinaryFunction<T> bf, List<T> x, T v) {
-        for (int i = 0; i != x.size(); ++i)
-            v = bf.call(v, x.get(i));
         return v;}
 
     public static <T> T reduce2 (BinaryFunction<T> bf, List<T> x, T v) {
@@ -60,28 +55,26 @@ final class Reduce {
 
         {
         final int a[] = {2, 3, 4};
-        assert reduce1(new Plus(),     a, 0) ==  9;
-        assert reduce1(new Multiply(), a, 1) == 24;
-        assert reduce3(new Plus(),     a, 0) ==  9;
-        assert reduce3(new Multiply(), a, 1) == 24;
+        assert reduce1(new Plus(),       a, 0) ==  9;
+        assert reduce1(new Multiplies(), a, 1) == 24;
+        assert reduce3(new Plus(),       a, 0) ==  9;
+        assert reduce3(new Multiplies(), a, 1) == 24;
         }
 
         {
         final Integer a[] = {2, 3, 4};
-        assert reduce1(new Plus(),     a, 0) ==  9;
-        assert reduce1(new Multiply(), a, 1) == 24;
-        assert reduce3(new Plus(),     a, 0) ==  9;
-        assert reduce3(new Multiply(), a, 1) == 24;
+        assert reduce1(new Plus(),       a, 0) ==  9;
+        assert reduce1(new Multiplies(), a, 1) == 24;
+        assert reduce3(new Plus(),       a, 0) ==  9;
+        assert reduce3(new Multiplies(), a, 1) == 24;
         }
 
         {
         final List<Integer> a = new LinkedList<Integer>(Arrays.asList(2, 3, 4));
-        assert reduce1(new Plus(),     a, 0) ==  9;
-        assert reduce1(new Multiply(), a, 1) == 24;
-        assert reduce2(new Plus(),     a, 0) ==  9;
-        assert reduce2(new Multiply(), a, 1) == 24;
-        assert reduce3(new Plus(),     a, 0) ==  9;
-        assert reduce3(new Multiply(), a, 1) == 24;
+        assert reduce2(new Plus(),       a, 0) ==  9;
+        assert reduce2(new Multiplies(), a, 1) == 24;
+        assert reduce3(new Plus(),       a, 0) ==  9;
+        assert reduce3(new Multiplies(), a, 1) == 24;
         }
 
         System.out.println("Done.");}}

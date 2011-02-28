@@ -4,11 +4,11 @@
 # Map.py
 # ------
 
-def square (n) :
-    return n ** 2;
+def square (x) :
+    return x ** 2;
 
-def cube (n) :
-    return n ** 3;
+def cube (x) :
+    return x ** 3;
 
 def map1 (uf, a) :
     if not a :

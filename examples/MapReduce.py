@@ -5,7 +5,6 @@
 # ------------
 
 import operator
-import random
 import sys
 import time
 
@@ -32,10 +31,12 @@ def test1 (f) :
 
 def test2 (f) :
     print f.__name__
-    random.seed(0)
-    a = [random.randint(-10, 10) for v in xrange(1000000)]
+    a = 1000000 * [1]
     s = time.clock()
-    print f(operator.add, cube, a, 0)
+    print f(operator.add, square, a, 0)
+    print f(operator.add, cube,   a, 0)
+    print f(operator.mul, square, a, 1)
+    print f(operator.mul, cube,   a, 1)
     t = time.clock()
     print (t - s) * 1000, "milliseconds"
     print
@@ -61,12 +62,18 @@ MapReduce.py
 [GCC 4.2.1 (Apple Inc. build 5646)]
 
 map_reduce_1
--508508
-309.48 milliseconds
+1000000
+1000000
+1
+1
+1053.557 milliseconds
 
 map_reduce_2
--508508
-316.618 milliseconds
+1000000
+1000000
+1
+1
+1200.288 milliseconds
 
 Done.
 """
@@ -78,12 +85,18 @@ MapReduce.py
 [GCC 4.4.3]
 
 map_reduce_1
--508508
-270.0 milliseconds
+1000000
+1000000
+1
+1
+970.0 milliseconds
 
 map_reduce_2
--508508
-300.0 milliseconds
+1000000
+1000000
+1
+1
+1040.0 milliseconds
 
 Done.
 """

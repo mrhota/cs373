@@ -13,10 +13,10 @@ return   :: a                -> IO a
 import Control.Exception (assert)
 
 square :: Int -> Int
-square n = n ^ (2 :: Int)
+square x = x ^ (2 :: Int)
 
 cube :: Int -> Int
-cube n = n ^ (3 :: Int)
+cube x = x ^ (3 :: Int)
 
 map1 :: (a -> a) -> [a] -> [a]
 map1 _  []       = []
@@ -38,7 +38,7 @@ main :: IO ()
 main =
     putStrLn "Map.hs" >>
 
-    test map   >>
+    test map  >>
     test map1 >>
     test map2 >>
 

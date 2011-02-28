@@ -20,7 +20,7 @@ final class Plus implements BinaryFunction<Integer> {
     public Integer call (Integer x, Integer y) {
         return x + y;}}
 
-final class Multiply implements BinaryFunction<Integer> {
+final class Multiplies implements BinaryFunction<Integer> {
     public Integer call (Integer x, Integer y) {
         return x * y;}}
 
@@ -40,7 +40,9 @@ final class MapReduce {
         return reduce(bf, map(uf, a), v);}
 
     public static int map_reduce_2 (BinaryFunction<Integer> bf, UnaryFunction<Integer> uf, int[] a, int v) {
-        return reduce(bf, map(uf, a), v);}
+        for (int w : a)
+            v = bf.call(v, uf.call(w));
+        return v;}
 
     public static void main (String[] args) {
         System.out.println("MapReduce.java");
@@ -48,47 +50,50 @@ final class MapReduce {
 
         {
         final int a[] = {2, 3, 4};
-        assert map_reduce_1(new Plus(),     new Square(), a, 0) ==    29;
-        assert map_reduce_1(new Plus(),     new Cube(),   a, 0) ==    99;
-        assert map_reduce_1(new Multiply(), new Square(), a, 1) ==   576;
-        assert map_reduce_1(new Multiply(), new Cube(),   a, 1) == 13824;
-        assert map_reduce_2(new Plus(),     new Square(), a, 0) ==    29;
-        assert map_reduce_2(new Plus(),     new Cube(),   a, 0) ==    99;
-        assert map_reduce_2(new Multiply(), new Square(), a, 1) ==   576;
-        assert map_reduce_2(new Multiply(), new Cube(),   a, 1) == 13824;
+
+        assert map_reduce_1(new Plus(),       new Square(), a, 0) ==    29;
+        assert map_reduce_1(new Plus(),       new Cube(),   a, 0) ==    99;
+        assert map_reduce_1(new Multiplies(), new Square(), a, 1) ==   576;
+        assert map_reduce_1(new Multiplies(), new Cube(),   a, 1) == 13824;
+
+        assert map_reduce_2(new Plus(),       new Square(), a, 0) ==    29;
+        assert map_reduce_2(new Plus(),       new Cube(),   a, 0) ==    99;
+        assert map_reduce_2(new Multiplies(), new Square(), a, 1) ==   576;
+        assert map_reduce_2(new Multiplies(), new Cube(),   a, 1) == 13824;
         }
+
+        final int s   = 1000000;
+        final int a[] = new int[s];
+        for (int i = 0; i != s; ++i)
+            a[i] = 1;
 
         {
         System.out.println("map_reduce_1");
-        final int n   = 100000;
-        final int a[] = new int[n];
-        for (int i = 0; i != n; ++i)
-            a[i] = i;
-        final long s = System.currentTimeMillis();
-        map_reduce_1(new Plus(),     new Square(), a, 0);
-        map_reduce_1(new Plus(),     new Cube(),   a, 0);
-        map_reduce_1(new Multiply(), new Square(), a, 1);
-        map_reduce_1(new Multiply(), new Cube(),   a, 1);
-        final long t = System.currentTimeMillis();
-        final long d = t - s;
-        System.out.println(d + " milliseconds");
+        final long cs = System.currentTimeMillis();
+
+        System.out.println(map_reduce_1(new Plus(),       new Square(), a, 0));
+        System.out.println(map_reduce_1(new Plus(),       new Cube(),   a, 0));
+        System.out.println(map_reduce_1(new Multiplies(), new Square(), a, 1));
+        System.out.println(map_reduce_1(new Multiplies(), new Cube(),   a, 1));
+
+        final long ct = System.currentTimeMillis();
+        final long cd = ct - cs;
+        System.out.println(cd + " milliseconds");
         System.out.println();
         }
 
         {
         System.out.println("map_reduce_2");
-        final int n   = 100000;
-        final int a[] = new int[n];
-        for (int i = 0; i != n; ++i)
-            a[i] = i;
-        final long s = System.currentTimeMillis();
-        map_reduce_1(new Plus(),     new Square(), a, 0);
-        map_reduce_1(new Plus(),     new Cube(),   a, 0);
-        map_reduce_1(new Multiply(), new Square(), a, 1);
-        map_reduce_1(new Multiply(), new Cube(),   a, 1);
-        final long t = System.currentTimeMillis();
-        final long d = t - s;
-        System.out.println(d + " milliseconds");
+        final long cs = System.currentTimeMillis();
+
+        System.out.println(map_reduce_2(new Plus(),       new Square(), a, 0));
+        System.out.println(map_reduce_2(new Plus(),       new Cube(),   a, 0));
+        System.out.println(map_reduce_2(new Multiplies(), new Square(), a, 1));
+        System.out.println(map_reduce_2(new Multiplies(), new Cube(),   a, 1));
+
+        final long ct = System.currentTimeMillis();
+        final long cd = ct - cs;
+        System.out.println(cd + " milliseconds");
         System.out.println();
         }
 
@@ -102,10 +107,18 @@ Java HotSpot(TM) 64-Bit Server VM (build 17.1-b03-307, mixed mode)
 MapReduce.java
 
 map_reduce_1
-92 milliseconds
+1000000
+1000000
+1
+1
+158 milliseconds
 
 map_reduce_2
-20 milliseconds
+1000000
+1000000
+1
+1
+138 milliseconds
 
 Done.
 */
@@ -118,10 +131,18 @@ OpenJDK Server VM (build 19.0-b09, mixed mode)
 MapReduce.java
 
 map_reduce_1
-58 milliseconds
+1000000
+1000000
+1
+1
+134 milliseconds
 
 map_reduce_2
-18 milliseconds
+1000000
+1000000
+1
+1
+99 milliseconds
 
 Done.
 */
