@@ -1,0 +1,34 @@
+CS373: Quiz #14 (5 pts)
+
+--------------------------------------------------------------------------
+1. In plain aggregation what is the relationship between the child
+   object's lifecycle and the parent object's lifecycle?
+   [UML]
+   (1 pt)
+
+the child object's lifecycle is independent of the parent object's
+lifecycle
+
+--------------------------------------------------------------------------
+2. In composition aggregation what is the relationship between the child
+   object's lifecycle and the parent object's lifecycle?
+   [UML]
+   (1 pt)
+
+the child object's lifecycle is dependent on the parent object's
+lifecycle
+
+--------------------------------------------------------------------------
+3. What kind of table is needed to represent a many-to-many association?
+   [Many-to-many]
+   (1 pt)
+
+junction table
+
+--------------------------------------------------------------------------
+4. What is the termination condition for a Java iterator? For a Python
+   iterator?
+   (1 pt)
+
+hasNext() return False
+a StopIteration exception
