@@ -1,0 +1,34 @@
+CS373: Quiz #15 (5 pts)
+
+--------------------------------------------------------------------------
+1. In plain aggregation how is the relationship denoted on the parent
+   side?
+   [UML]
+   (1 pt)
+
+an unfilled diamond shape
+
+--------------------------------------------------------------------------
+2. In composition aggregation how is the relationship denoted on the
+   parent side?
+   [UML]
+   (1 pt)
+
+a filled diamond shape
+
+--------------------------------------------------------------------------
+3. Distinguish incomplete vs. complete specialization.
+   [Subclasses]
+   (1 pt)
+
+some vs. all of the individuals of the parent class have unique attributes
+Example: teaching assistant, research assistant, incomplete, disjoint
+
+--------------------------------------------------------------------------
+4. Distinguish disjoint vs. overlapping specialization.
+   [Subclasses]
+   (1 pt)
+
+an individual of the parent class may be a member of one vs. many
+subclasses
+Example: city lot, county lot, complete, overlapping

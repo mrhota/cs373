@@ -12,12 +12,6 @@ return   :: a                -> IO a
 
 import Control.Exception (assert)
 
-square :: Int -> Int
-square x = x ^ (2 :: Int)
-
-cube :: Int -> Int
-cube x = x ^ (3 :: Int)
-
 map1 :: (a -> a) -> [a] -> [a]
 map1 _  []       = []
 map1 uf (x : xs) = uf x : map1 uf xs
@@ -31,8 +25,8 @@ test f =
         a = [2,  3,  4]
         b = [4,  9, 16]
         c = [8, 27, 64]
-    in assert ((f square a) == b) return () >>
-       assert ((f cube   a) == c) return ()
+    in assert ((f ((flip (^)) (2 :: Int)) a) == b) return () >>
+       assert ((f ((flip (^)) (3 :: Int)) a) == c) return ()
 
 main :: IO ()
 main =
