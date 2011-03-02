@@ -9,7 +9,7 @@ import operator
 def reduce1 (bf, a, v) :
     if not a :
         return v
-    return reduce2(bf, a[1:], bf(v, a[0]))
+    return reduce1(bf, a[1:], bf(v, a[0]))
 
 def reduce2 (bf, a, v) :
     i = 0
@@ -23,8 +23,7 @@ def reduce3 (bf, a, v) :
     i = iter(a)
     while True :
         try :
-            w = i.next()
-            v = bf(v, w)
+            v = bf(v, i.next())
         except StopIteration :
             break
     return v

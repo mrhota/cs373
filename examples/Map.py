@@ -20,7 +20,7 @@ def map2 (uf, a) :
     s = len(a)
     x = []
     while i != s :
-        x.append(uf(a[i]))
+        x += [uf(a[i])]
         i += 1
     return x
 
@@ -29,7 +29,7 @@ def map3 (uf, a) :
     x = []
     while True :
         try :
-            x.append(uf(i.next()))
+            x += [uf(i.next())]
         except StopIteration :
             break
     return x
@@ -37,7 +37,7 @@ def map3 (uf, a) :
 def map4 (uf, a) :
     x = []
     for v in a :
-        x.append(uf(v))
+        x += [uf(v)]
     return x
 
 def map5 (uf, a) :

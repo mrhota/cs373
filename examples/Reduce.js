@@ -22,9 +22,9 @@ function reduce (bf, a, v) {
 a = [2, 3, 4];
 
 //assert(a.reduce(plus, a, 0) ==  9);       // 1.8
-assert(  reduce(plus, a, 0) ==  9);
+  assert(  reduce(plus, a, 0) ==  9);
 
 //assert(a.reduce(multiplies, a, 1) == 24); // 1.8
-assert(  reduce(multiplies, a, 1) == 24);
+  assert(  reduce(multiplies, a, 1) == 24);
 
 print("Done.\n");
