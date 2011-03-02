@@ -16,12 +16,6 @@ import System.CPUTime    (getCPUTime)
 cpms :: Double         -- clocks per millisecond
 cpms = 10 ^ (9 :: Int)
 
-square :: Int -> Int
-square n = n ^ (2 :: Int)
-
-cube :: Int -> Int
-cube n = n ^ (3 :: Int)
-
 map_reduce_1 :: (a -> a -> a) -> (a -> a) -> a -> [a] -> a
 map_reduce_1 bf uf v a = foldl bf v (map uf a)
 
@@ -33,10 +27,10 @@ test1 :: ((Int -> Int -> Int) -> (Int -> Int) -> Int -> [Int] -> Int) -> IO ()
 test1 f =
     let a :: [Int]
         a = [2, 3, 4]
-    in assert ((f (+) square 0 a) ==    29) return () >>
-       assert ((f (+) cube   0 a) ==    99) return () >>
-       assert ((f (*) square 1 a) ==   576) return () >>
-       assert ((f (*) cube   1 a) == 13824) return ()
+    in assert ((f (+) ((flip (^)) (2 :: Int)) 0 a) ==    29) return () >>
+       assert ((f (+) ((flip (^)) (3 :: Int)) 0 a) ==    99) return () >>
+       assert ((f (*) ((flip (^)) (2 :: Int)) 1 a) ==   576) return () >>
+       assert ((f (*) ((flip (^)) (3 :: Int)) 1 a) == 13824) return ()
 
 test2 :: ((Int -> Int -> Int) -> (Int -> Int) -> Int -> [Int] -> Int) -> IO ()
 test2 f =
@@ -44,10 +38,10 @@ test2 f =
         a = replicate 100000 1
     in getCPUTime >>=
        (\s ->
-           print (f (+) square 0 a) >>
-           print (f (+) cube   0 a) >>
-           print (f (*) square 1 a) >>
-           print (f (*) cube   1 a) >>
+           print (f (+) ((flip (^)) (2 :: Int)) 0 a) >>
+           print (f (+) ((flip (^)) (3 :: Int)) 0 a) >>
+           print (f (*) ((flip (^)) (2 :: Int)) 1 a) >>
+           print (f (*) ((flip (^)) (3 :: Int)) 1 a) >>
            getCPUTime               >>=
            (\t ->
                let d :: Double
