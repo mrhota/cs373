@@ -4,12 +4,14 @@
 # RMSE.py
 # -------
 
-import math
 import sys
 import time
 
 def square_of_difference (x, y) :
-    return float(x - y)**2
+    return float(x - y) ** 2
+
+def mean (a) :
+    return sum(a) / len(a)
 
 def rmse1 (a, p) :
     i = 0
@@ -18,16 +20,25 @@ def rmse1 (a, p) :
     while i != s :
         v += square_of_difference(a[i], p[i])
         i += 1
-    return math.sqrt(v / s)
+    return (v / s) ** .5
 
 def rmse2 (a, p) :
-    return math.sqrt(reduce(lambda x, (y, z) : x + square_of_difference(y, z), zip(a, p), 0) / len(a))
-
-def mean (a) :
-    return sum(a) / len(a)
+    z = zip(a, p)
+    i = 0
+    s = len(a)
+    v = 0
+    for (x, y) in z :
+        v += square_of_difference(x, y)
+    return (v / s) ** .5
 
 def rmse3 (a, p) :
-    return math.sqrt(mean(map(square_of_difference, a, p)))
+    return mean(map(lambda (x, y) : square_of_difference(x, y), zip(a, p))) ** .5
+
+def rmse4 (a, p) :
+    return (reduce(lambda v, (x, y) : v + square_of_difference(x, y), zip(a, p), 0) / len(a)) ** .5
+
+def rmse5 (a, p) :
+    return mean(map(square_of_difference, a, p)) ** .5
 
 def test1 (f) :
     assert str(f((3, 3, 3),       (3, 3, 3)))       == "0.0"
@@ -60,30 +71,42 @@ assert zip([2, 3, 4], [5, 6, 7])   == [(2, 5), (3, 6), (4, 7)]
 test1(rmse1)
 test1(rmse2)
 test1(rmse3)
+test1(rmse4)
+test1(rmse5)
 
 test2(rmse1)
 test2(rmse2)
 test2(rmse3)
+test2(rmse4)
+test2(rmse5)
 
 print "Done."
 
 """
 RMSE.py
 
-2.6.1 (r261:67515, Jun 24 2010, 21:47:49)
+2.5.4 (r254:67916, Jun 24 2010, 21:47:25)
 [GCC 4.2.1 (Apple Inc. build 5646)]
 
 rmse1
 4.0
-584.237 milliseconds
+1154.111 milliseconds
 
 rmse2
 4.0
-1722.873 milliseconds
+2081.106 milliseconds
 
 rmse3
 4.0
-469.992 milliseconds
+2481.803 milliseconds
+
+rmse4
+4.0
+2430.651 milliseconds
+
+rmse5
+4.0
+925.28 milliseconds
 
 Done.
 """
@@ -96,15 +119,23 @@ RMSE.py
 
 rmse1
 4.0
-600.0 milliseconds
+620.0 milliseconds
 
 rmse2
 4.0
-1290.0 milliseconds
+1220.0 milliseconds
 
 rmse3
 4.0
-510.0 milliseconds
+1380.0 milliseconds
+
+rmse4
+4.0
+1370.0 milliseconds
+
+rmse5
+4.0
+490.0 milliseconds
 
 Done.
 """
