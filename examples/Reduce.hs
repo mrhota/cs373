@@ -3,11 +3,13 @@
 -- ---------
 
 {-
-(>>)     :: IO a          -> IO b          -> IO b -- 'then' operator
-assert   :: Bool          -> a             -> a
-foldl    :: (a -> b -> a) -> a      -> [b] -> a
-putStrLn :: String         -> IO ()
-return   :: a              -> IO a
+(>>)     :: IO a          -> IO b      -> IO b -- 'then' operator
+(+)      :: a             -> a         -> a
+(*)      :: a             -> a         -> a
+assert   :: Bool          -> a         -> a
+foldl    :: (a -> b -> a) -> a  -> [b] -> a
+putStrLn :: String                     -> IO ()
+return   :: a                          -> IO a
 -}
 
 import Control.Exception (assert)

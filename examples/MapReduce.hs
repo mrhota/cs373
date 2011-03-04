@@ -3,11 +3,16 @@
 -- ------------
 
 {-
-(>>)     :: IO a          -> IO b          -> IO b -- 'then' operator
-assert   :: Bool          -> a             -> a
-foldl    :: (a -> b -> a) -> a      -> [b] -> a
-putStrLn :: String         -> IO ()
-return   :: a              -> IO a
+(>>)     :: IO a          -> IO b       -> IO b -- 'then' operator
+(+)      :: a             -> a          -> a
+(*)      :: a             -> a          -> a
+(^)      :: a             -> b          -> a
+assert   :: Bool          -> a          -> a
+foldl    :: (a -> b -> a) -> a   -> [b] -> a
+flip     :: (a -> b -> c) -> b   -> a   -> c
+map      :: (a -> b)      -> [a]        -> [b]
+putStrLn :: String                      -> IO ()
+return   :: a                           -> IO a
 -}
 
 import Control.Exception (assert)
@@ -27,10 +32,10 @@ test1 :: ((Int -> Int -> Int) -> (Int -> Int) -> Int -> [Int] -> Int) -> IO ()
 test1 f =
     let a :: [Int]
         a = [2, 3, 4]
-    in assert ((f (+) ((flip (^)) (2 :: Int)) 0 a) ==    29) return () >>
-       assert ((f (+) ((flip (^)) (3 :: Int)) 0 a) ==    99) return () >>
-       assert ((f (*) ((flip (^)) (2 :: Int)) 1 a) ==   576) return () >>
-       assert ((f (*) ((flip (^)) (3 :: Int)) 1 a) == 13824) return ()
+    in assert ((f (+) ((flip (^)) (2::Int)) 0 a) ==    29) return () >>
+       assert ((f (+) ((flip (^)) (3::Int)) 0 a) ==    99) return () >>
+       assert ((f (*) ((flip (^)) (2::Int)) 1 a) ==   576) return () >>
+       assert ((f (*) ((flip (^)) (3::Int)) 1 a) == 13824) return ()
 
 test2 :: ((Int -> Int -> Int) -> (Int -> Int) -> Int -> [Int] -> Int) -> IO ()
 test2 f =
@@ -38,10 +43,10 @@ test2 f =
         a = replicate 100000 1
     in getCPUTime >>=
        (\s ->
-           print (f (+) ((flip (^)) (2 :: Int)) 0 a) >>
-           print (f (+) ((flip (^)) (3 :: Int)) 0 a) >>
-           print (f (*) ((flip (^)) (2 :: Int)) 1 a) >>
-           print (f (*) ((flip (^)) (3 :: Int)) 1 a) >>
+           print (f (+) ((flip (^)) (2::Int)) 0 a) >>
+           print (f (+) ((flip (^)) (3::Int)) 0 a) >>
+           print (f (*) ((flip (^)) (2::Int)) 1 a) >>
+           print (f (*) ((flip (^)) (3::Int)) 1 a) >>
            getCPUTime               >>=
            (\t ->
                let d :: Double

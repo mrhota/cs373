@@ -6,8 +6,6 @@ function assert (b) {
     if (!b) {
         throw "Assertion Error"}}
 
-print("Reduce.js\n");
-
 function plus (x, y) {
     return x + y;}
 
@@ -18,6 +16,8 @@ function reduce (bf, a, v) {
     for (var i in a)
         v = bf(v, a[i]);
     return v;}
+
+print("Reduce.js\n");
 
 a = [2, 3, 4];
 

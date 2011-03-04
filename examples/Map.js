@@ -6,8 +6,6 @@ function assert (b) {
     if (!b) {
         throw "Assertion Error"}}
 
-print("Map.js\n");
-
 function square (x) {
     return x * x;}
 
@@ -19,6 +17,8 @@ function map (uf, a) {
     for (var i in a)
         x = x.concat(uf(a[i]));
     return x;}
+
+print("Map.js\n");
 
 a = [2, 3, 4];
 

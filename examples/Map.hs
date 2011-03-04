@@ -3,11 +3,13 @@
 -- ------
 
 {-
-(>>)     :: IO a     -> IO b -> IO b -- 'then' operator
-assert   :: Bool     -> a    -> a
-map      :: (a -> b) -> [a]  -> [b]
-putStrLn :: String           -> IO ()
-return   :: a                -> IO a
+(>>)     :: IO a          -> IO b     -> IO b -- 'then' operator
+(^)      :: a             -> b        -> a
+assert   :: Bool          -> a        -> a
+flip     :: (a -> b -> c) -> b   -> a -> c
+map      :: (a -> b)      -> [a]      -> [b]
+putStrLn :: String                    -> IO ()
+return   :: a                         -> IO a
 -}
 
 import Control.Exception (assert)
@@ -25,8 +27,8 @@ test f =
         a = [2,  3,  4]
         b = [4,  9, 16]
         c = [8, 27, 64]
-    in assert ((f ((flip (^)) (2 :: Int)) a) == b) return () >>
-       assert ((f ((flip (^)) (3 :: Int)) a) == c) return ()
+    in assert ((f ((flip (^)) (2::Int)) a) == b) return () >>
+       assert ((f ((flip (^)) (3::Int)) a) == c) return ()
 
 main :: IO ()
 main =

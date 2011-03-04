@@ -6,8 +6,6 @@ function assert (b) {
     if (!b) {
         throw "Assertion Error"}}
 
-print("MapReduce.js\n");
-
 function square (x) {
     return x * x;}
 
@@ -38,6 +36,8 @@ function map_reduce_2 (bf, uf, a, v) {
     for (var i in a)
         v = bf(v, uf(a[i]));
     return v;}
+
+print("MapReduce.js\n");
 
 a = [2, 3, 4];
 
