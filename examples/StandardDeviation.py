@@ -76,20 +76,24 @@ print "Done."
 """
 StandardDeviation.py
 
-2.6.1 (r261:67515, Jun 24 2010, 21:47:49)
+2.5.4 (r254:67916, Jun 24 2010, 21:47:25)
 [GCC 4.2.1 (Apple Inc. build 5646)]
+
+standard_deviation
+0.0
+724.878 milliseconds
 
 standard_deviation_1
 0.0
-340.466 milliseconds
+767.558 milliseconds
 
 standard_deviation_2
 0.0
-402.411 milliseconds
+990.297 milliseconds
 
 standard_deviation_3
 0.0
-412.174 milliseconds
+1015.875 milliseconds
 
 Done.
 """
@@ -100,17 +104,21 @@ StandardDeviation.py
 2.6.5 (r265:79063, Apr 16 2010, 13:09:56)
 [GCC 4.4.3]
 
+standard_deviation
+0.0
+300.0 milliseconds
+
 standard_deviation_1
 0.0
-340.0 milliseconds
+320.0 milliseconds
 
 standard_deviation_2
 0.0
-480.0 milliseconds
+430.0 milliseconds
 
 standard_deviation_3
 0.0
-450.0 milliseconds
+410.0 milliseconds
 
 Done.
 """
