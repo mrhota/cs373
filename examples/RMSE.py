@@ -20,7 +20,7 @@ def rmse1 (a, p) :
     while i != s :
         v += square_of_difference(a[i], p[i])
         i += 1
-    return (float(v) / s) ** .5
+    return (float(v) / s) ** 0.5
 
 def rmse2 (a, p) :
     z = zip(a, p)
@@ -29,16 +29,16 @@ def rmse2 (a, p) :
     v = 0
     for (x, y) in z :
         v += square_of_difference(x, y)
-    return (float(v) / s) ** .5
+    return (float(v) / s) ** 0.5
 
 def rmse3 (a, p) :
-    return mean(map(lambda (x, y) : square_of_difference(x, y), zip(a, p))) ** .5
+    return mean(map(lambda (x, y) : square_of_difference(x, y), zip(a, p))) ** 0.5
 
 def rmse4 (a, p) :
-    return (float(reduce(lambda v, (x, y) : v + square_of_difference(x, y), zip(a, p), 0)) / len(a)) ** .5
+    return (float(reduce(lambda v, (x, y) : v + square_of_difference(x, y), zip(a, p), 0)) / len(a)) ** 0.5
 
 def rmse5 (a, p) :
-    return mean(map(square_of_difference, a, p)) ** .5
+    return mean(map(square_of_difference, a, p)) ** 0.5
 
 def test1 (f) :
     assert str(f((3, 3, 3),       (3, 3, 3)))       == "0.0"
