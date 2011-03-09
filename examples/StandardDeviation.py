@@ -26,6 +26,13 @@ def mean (a) :
 def square_of_difference (x, y) :
     return (x - y) ** 2
 
+def standard_deviation (a) :
+	m = mean(a)
+	v = 0
+	for w in a :
+		v += square_of_difference(w, m)
+	return (v / len(a)) ** 0.5
+
 def standard_deviation_1 (a) :
     return mean(map(square_of_difference, a, len(a) * [mean(a)])) ** 0.5
 
@@ -54,10 +61,12 @@ print
 print sys.version
 print
 
+test1(standard_deviation)
 test1(standard_deviation_1)
 test1(standard_deviation_2)
 test1(standard_deviation_3)
 
+test2(standard_deviation)
 test2(standard_deviation_1)
 test2(standard_deviation_2)
 test2(standard_deviation_3)
