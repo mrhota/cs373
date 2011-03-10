@@ -21,7 +21,7 @@ class Iota {
 
     public Iota (int b, int e) {
         _b = b;
-        _e = e + 1;}
+        _e = e;}
 
     public boolean hasNext () {
         return _b != _e;}
@@ -54,7 +54,7 @@ final class Factorial3 implements UnaryFunction {
         return v;}
 
     public int call (int n) {
-        return reduce(new Multiplies(), new Iota(1, n), 1);}}
+        return reduce(new Multiplies(), new Iota(1, n + 1), 1);}}
 
 final class Factorial {
     private static void test (UnaryFunction f) {
