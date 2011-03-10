@@ -5,7 +5,9 @@ cs:
 	--include "*.c++"           \
 	--include "*.h"             \
 	--include "*.html"          \
+	--include "*.in"            \
 	--include "*.java"          \
+	--include "*.out"           \
 	--include "*.py"            \
 	--include "*.pdf"           \
 	--exclude "*"               \
