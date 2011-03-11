@@ -23,7 +23,10 @@ def sum_squares_1 (a) :
 def sum_squares_2 (a) :
     return sum(map(bind2nd(operator.pow, 2), a))
 
-sum_squares_3 = compose(sum, bind1st(map, bind2nd(operator.pow, 2)))
+sum_squares_3 = \
+    compose(
+        sum,
+        bind1st(map, bind2nd(operator.pow, 2)))
 
 def test1 (f) :
     a = [2, 3, 4]
