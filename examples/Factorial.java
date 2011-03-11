@@ -16,8 +16,8 @@ final class Multiplies implements BinaryFunction<Integer> {
         return x * y;}}
 
 class Iota implements Iterator<Integer> {
-    private Integer _b;
-    private Integer _e;
+    private int _b;
+    private int _e;
 
     public Iota (Integer b, Integer e) {
         _b = b;
