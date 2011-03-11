@@ -25,9 +25,7 @@ class Iota1 (object) :
         return p
 
 def Iota2 (b, e) :
-    while True :
-        if b == e :
-            raise StopIteration()
+    while b != e :
         yield b
         b += 1
 
