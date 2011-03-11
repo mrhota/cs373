@@ -29,9 +29,7 @@ class Iota {
     public int next () {
         if (!hasNext())
             throw new NoSuchElementException();
-        int v = _b;
-        ++_b;
-        return v;}}
+        return _b++;}}
 
 final class Factorial1 implements UnaryFunction {
     public int call (int n) {
