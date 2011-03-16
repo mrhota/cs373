@@ -71,6 +71,6 @@ final class Factorial {
 
         test(new Factorial1());
         test(new Factorial2());
-//      test(new Factorial3());
+        test(new Factorial3());
 
         System.out.println("Done.");}}
