@@ -31,8 +31,8 @@ class Iota implements Iterator<Integer> {
             throw new NoSuchElementException();
         return _b++;}
 
-	public void remove () {
-		new UnsupportedOperationException();}}
+    public void remove () {
+        new UnsupportedOperationException();}}
 
 final class Factorial1 implements UnaryFunction<Integer> {
     public Integer call (Integer n) {
@@ -71,6 +71,6 @@ final class Factorial {
 
         test(new Factorial1());
         test(new Factorial2());
-//        test(new Factorial3());
+//      test(new Factorial3());
 
         System.out.println("Done.");}}
