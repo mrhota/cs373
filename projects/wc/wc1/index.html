@@ -4,31 +4,100 @@
 <body>
 <h3>Specification</h3>
 <hr />
-<p>Create a <a href="http://code.google.com/appengine/">Google App Engine</a> app to compute an <b>amortization</b> and its corresponding table.</p>
+<p>Create a <a href="http://code.google.com/appengine/">Google App Engine</a> app that emulates <a href="http://www.imdb.com/">IMDB</a> to track world crisis.</p>
 
-<p>An amortization is made up of <b>five</b> variables:</p>
+<p>There will be <b>three</b> phases.</p>
+
 <ul>
-<li>present value</li>
-<li>future value</li>
-<li>payment amount</li>
-<li>rate of interest</li>
-<li>number of payments</li>
+<li>
+I
+<ul>
+<li>collect data on <b>four</b> crisis and post to <b>Blackboard</b> on the <b>World Crisis</b> forum</li>
+<li>create an <b>XML schema</b> and <b>XML instance</b> that <a href="http://tools.decisionsoft.com/schemaValidate/">validate</a>, <b>no</b> agreement between groups about this in this phase</li>
+<li>create a set of GAE datastore models to represent the data</li>
+<li>create an import/export facility from the XML into GAE and back</li>
+</ul>
+</li>
+
+<li>
+II
+<ul>
+<li>agree on a <b>single</b> <b>XML schema</b> and <b>XML instance</b> for <b>all</b> the groups</li>
+<li>redesign the GAE datastore models to represent the data</li>
+<li>redesign the import/export facility from the XML into GAE and back</li>
+<li>create a GUI to present and navigate the data</li>
+<li>write an initial report</li>
+</ul>
+</li>
+
+<li>
+III
+<ul>
+<li>create a search capability</li>
+<li>edit the report</li>
+<li>create a presentation</li>
+<li>create a demonstration</li>
+<li>give a presentation and demonstration in class</li>
+</ul>
+</li>
 </ul>
 
-<p>The program must be able to compute <b>any</b> of the first <b>three</b>, given the remaining <b>four</b>.</p>
+<p>IMDB has <b>two</b> major kinds of pages: <b>movies/shows</b> and <b>people</b>. Movies/shows link to people and people link back to movies/shows.</p>
 
-<p>Perform rounding so that the last payment is less than or equal to the regular payment, and make sure that the present value or future value work out to the penny.</p>
+<p>WC will have <b>three</b> major kinds of pages: <b>crisis</b>, <b>organizations</b>, and <b>people</b>, and gain each will link to the others.</p>
 
-<p>Here's my limited implementation:</p>
+<p>The pages should have at a minimum the following attributes:</p>
+
 <ul>
-<li><a href="http://amort.appspot.com/">amort</a></li>
+<li>
+crisis
+<ul>
+<li>name</li>
+<li>kind</li>
+<li>location</li>
+<li>date and time</li>
+<li>description</li>
+<li>human impact</li>
+<li>economic impact</li>
+<li>resources needed</li>
+<li>ways to help</li>
+<li>images (e.g. Flickr, etc.)</li>
+<li>videos (e.g. YouTube, etc.)</li>
+<li>social networks (e.g. Facebook, Twitter, etc.)</li>
+<li>organizations</li>
+<li>people</li>
+</ul>
+</li>
+
+<li>
+organizations
+<ul>
+<li>name</li>
+<li>kind</li>
+<li>location</li>
+<li>history</li>
+<li>contact info</li>
+<li>social networks (e.g. Facebook, Twitter, etc.)</li>
+<li>crisis</li>
+<li>people</li>
+</ul>
+</li>
+
+<li>
+people
+<ul>
+<li>name</li>
+<li>kind</li>
+<li>location</li>
+<li>social networks (e.g. Facebook, Twitter, etc.)</li>
+<li>crisis</li>
+<li>organizations</li>
+</ul>
+</li>
 </ul>
 
 <h3>Groups</h3>
 <hr />
-<p>Organize a group of <b>four</b> or <b>five</b> members from the <b>same section</b>.
-The group will stay together through all of the remaining projects.</p>
-
 <p>Pick a member of the group to be <b>project leader</b>.
 A group member can only be project leader <b>once</b>.</p>
 
@@ -42,14 +111,6 @@ A group member can only be project leader <b>once</b>.</p>
 
 <p>The leader will report these adjustments in the <b>Google Form</b>.</p>
 
-<h3>Analysis</h3>
-<hr />
-<p>These are additional descriptions of the underlying math:</p>
-<ul>
-<li><a href="http://en.wikipedia.org/wiki/Amortization_schedule">Wikipedia: Amortization Schedule</a></li>
-<li><a href="http://mathworld.wolfram.com/PresentValue.html">Wolfram: Present Value</a></li>
-</ul>
-
 <h3>Assembla IDs</h3>
 <hr />
 <p>
@@ -61,28 +122,28 @@ Alex (CS373-1pm): <b>alexloh80</b>
 <h3>CS373-11am Assembla Repositories</h3>
 <hr />
 <p>
-Private Repository: cs373-11am-amort-<b>turnin-id</b><br />
+Private Repository: cs373-11am-wc1-<b>turnin-id</b><br />
 <br />
 
 Public Repository: <a href="https://www.assembla.com/code/cs373-11am-tests/git/nodes?rev=master">cs373-11am-tests</a><br />
-Unit Tests: cs373-11am-tests/amort/TestAmort-<b>turnin-id</b>.py<br />
+Unit Tests: cs373-11am-tests/wc1/TestWC1-<b>turnin-id</b>.py<br />
 </p>
 
 <h3>CS373-1pm Assembla Repositories</h3>
 <hr />
 <p>
-Private Repository: cs373-1pm-amort-<b>turnin-id</b><br />
+Private Repository: cs373-1pm-wc1-<b>turnin-id</b><br />
 <br />
 
 Public Repository: <a href="https://www.assembla.com/code/cs373-1pm-tests/git/nodes?rev=master">cs373-1pm-tests</a><br />
-Unit Tests: cs373-1pm-tests/amort/TestAmort-<b>turnin-id</b>.py<br />
+Unit Tests: cs373-1pm-tests/wc1/TestWC1-<b>turnin-id</b>.py<br />
 </p>
 
 <h3>Google Forms</h3>
 <hr />
 <p>
-<a href="https://spreadsheets.google.com/viewform?formkey=dEE3Tl9NZGZGeWpCd01TWFVYQ2FFNEE6MQ#gid=0">Arun (CS373-11am)</a><br />
-<a href="https://spreadsheets.google.com/embeddedform?formkey=dG5ySjZwM29USnF0dUdxMkpHajdHamc6MA">Alex (CS373-1pm)</a>
+Arun (CS373-11am)<br />
+Alex (CS373-1pm)
 </p>
 
 <h3>Turnin IDs</h3>
@@ -90,7 +151,7 @@ Unit Tests: cs373-1pm-tests/amort/TestAmort-<b>turnin-id</b>.py<br />
 <p>
 Arun (CS373-11am): <b>cs373pj4 / aseehra</b><br />
 Alex (CS373-1pm): <b>cs373pj4 / alexloh</b><br />
-Filename: <b>Amort.zip</b>
+Filename: <b>WC1.zip</b>
 </p>
 
 <h3>Issues and Submission</h3>
@@ -127,7 +188,7 @@ There should be <b>several</b> commits.<br />
 It is <b>your</b> responsibility to protect your code from the rest of the students in the class.<br />
 If your code gets out, <b>you</b> are as guilty as the recipient of <b>academic dishonesty</b>.
 </td>
-<td>Amort.log</td>
+<td>WC1.log</td>
 <td>
 Assembla (<i>private</i>)<br />
 Turnin (<i>zip</i>)
@@ -143,9 +204,8 @@ Post the tests to the TA public repository (ID above).<br />
 Reach consensus on the tests.
 </td>
 <td>
-TestAmort.py<br />
-TestAmort.out<br />
-<a href="http://userweb.cs.utexas.edu/users/downing/projects/amort/TestFacadeAmort.py">TestFacadeAmort.py</a>
+TestWC1.py<br />
+TestWC1.out
 </td>
 <td>
 Assembla (<i>private</i>)<br />
@@ -162,7 +222,9 @@ Use <b>assert</b> to check <b>pre-conditions</b>, <b>post-conditions</b>,<br /><
 Worry about this <b>last</b>, but your program should run<br />as <b>fast</b> as possible and use as <b>little</b> memory as possible.
 </td>
 <td>
-Amort.py
+WC1.py<br />
+<a href="http://userweb.cs.utexas.edu/users/downing/projects/wc1/WC1.xml.txt">WC1.xml</a><br />
+<a href="http://userweb.cs.utexas.edu/users/downing/projects/wc1/WC1.xsd.txt">WC1.xsd</a>
 </td>
 <td>
 Assembla (<i>private</i>)<br />
@@ -175,7 +237,7 @@ Turnin (<i>zip</i>)
 <td>
 <b>documentation</b><br />
 Use <b>pydoc</b> to document the <b>interfaces</b>.<br />
-The above documentation only needs to be generated from <b>Amort.py</b>.<br />
+The above documentation only needs to be generated from <b>WC1.py</b>.<br />
 Use comments <b>only</b> if you need to explain the <b>why</b> of a particular implementation.<br />
 Choose a coding convention and be consistent.<br />
 Use good variable names.<br />
