@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 
-# ---------
-# Arrays.py
-# ---------
+# ------------
+# Sequences.py
+# ------------
 
-print "Arrays.py"
+print "Sequences.py"
 
 def test_1 (T) :
     assert not T()
