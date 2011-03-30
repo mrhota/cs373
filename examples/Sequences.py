@@ -81,6 +81,10 @@ def test_2 (T) :
     assert len(a)    == 3
     assert sum(a, 0) == 9
 
+    a = T(["abc", "def", "ghi"])
+    assert len(a)     == 3
+#   assert sum(a, "") == "abcdefghi"; # TypeError: sum() can't sum strings [use "".join(seq) instead]
+
     a = T([[2, 3, 4], [5, 6]])
     assert len(a[0]) == 3
     assert len(a[1]) == 2
