@@ -58,7 +58,7 @@ main =
     test1 sum_squares_1 >>
     test1 sum_squares_2 >>
     test1 sum_squares_3 >>
-    putStrLn ""        >>
+    putStrLn ""         >>
 
     putStrLn "sum_squares_1" >>
     test2 sum_squares_1      >>
