@@ -23,17 +23,17 @@ Scala
 import java.util.Arrays;
 
 class Quiz22 {
-	public static void arraycopy (long[] a, int i, long[] b, int j, int s) {
-		if (j < i) {
-			int n = 0;
-			while (n != s) {
-				b[j + n] = a[i + n];
-				++n;}}
-		else {
-			int n = s;
-			while (n != 0) {
-				--n;
-				b[j + n] = a[i + n];}}}
+    public static void arraycopy (long[] a, int i, long[] b, int j, int s) {
+        if (j < i) {
+            int n = 0;
+            while (n != s) {
+                b[j + n] = a[i + n];
+                ++n;}}
+        else {
+            int n = s;
+            while (n != 0) {
+                --n;
+                b[j + n] = a[i + n];}}}
 
     public static void main (String[] args) {
         {
