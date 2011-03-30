@@ -45,36 +45,36 @@ def test_1 (T) :
     assert     (a >= a)
 
     a = T("abCbA")
-    assert "".join(a + a) == "abCbAabCbA"
+    assert (a + a) == T("abCbAabCbA")
     b  = T("abCbA")
     b += a
-    assert "".join(b) == "abCbAabCbA"
+    assert (b) == T("abCbAabCbA")
 
     a = T("abCbA")
-    assert "".join(3 * a) == "abCbAabCbAabCbA"
+    assert (3 * a) == T("abCbAabCbAabCbA")
     b  = T("abCbA")
     b *= 3
-    assert "".join(b) == "abCbAabCbAabCbA"
+    assert b == T("abCbAabCbAabCbA")
 
     a = T("abCbA")
-    assert "".join(a[1:4]) == "bCb"
-    assert "".join(a[1: ]) == "bCbA"
-    assert "".join(a[ :4]) == "abCb"
-    assert "".join(a[0:5]) == "abCbA"
-    assert "".join(a[ : ]) == "abCbA"
+    assert (a[1:4]) == T("bCb")
+    assert (a[1: ]) == T("bCbA")
+    assert (a[ :4]) == T("abCb")
+    assert (a[0:5]) == T("abCbA")
+    assert (a[ : ]) == T("abCbA")
 
     a = T("abCbA")
-    assert "".join(a[  1: 4: 2]) == "bb"
-    assert "".join(a[ -4:-1: 2]) == "bb"
-    assert "".join(a[  0: 5: 2]) == "aCA"
-    assert "".join(a[ -5: 5: 2]) == "aCA"
-    assert "".join(a[   :  : 2]) == "aCA"
-    assert "".join(a[  1: 4:-2]) == ""
-    assert "".join(a[  3: 0:-2]) == "bb"
-    assert "".join(a[ -2:-5:-2]) == "bb"
-    assert "".join(a[  4:-6:-2]) == "ACa"
-    assert "".join(a[ -1:-6:-2]) == "ACa"
-    assert "".join(a[   :  :-2]) == "ACa"
+    assert (a[  1: 4: 2]) == T("bb")
+    assert (a[ -4:-1: 2]) == T("bb")
+    assert (a[  0: 5: 2]) == T("aCA")
+    assert (a[ -5: 5: 2]) == T("aCA")
+    assert (a[   :  : 2]) == T("aCA")
+    assert (a[  1: 4:-2]) == T("")
+    assert (a[  3: 0:-2]) == T("bb")
+    assert (a[ -2:-5:-2]) == T("bb")
+    assert (a[  4:-6:-2]) == T("ACa")
+    assert (a[ -1:-6:-2]) == T("ACa")
+    assert (a[   :  :-2]) == T("ACa")
 
 def test_2 (T) :
     a = T([2, 3, 4])
