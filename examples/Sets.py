@@ -23,12 +23,52 @@ assert s            ==     frozenset((2, 'abc', 3.45))
 assert s            ==     set((2, 3.45, 'abc'))
 
 s = set({2 : "ghi", 3.45 : 3, "abc" : 6.78, 2 : "def"})
-assert s == set([2, 3.45, "abc"])
+assert type(s) is set
+assert s       == set([2, 3.45, "abc"])
 
+s = frozenset({2 : "ghi", 3.45 : 3, "abc" : 6.78, 2 : "def"})
+assert type(s) is frozenset
+assert s       == frozenset([2, 3.45, "abc"])
+
+set()       ==     set()
 set()       is not set()
 frozenset() is     frozenset()
 
-s = set()          # sets only
+s = set([2, 3.45, "abc", 2])
+t = set(s)
+assert t ==     s
+assert t is not s
+
+s = frozenset([2, 3.45, "abc", 2])
+t = frozenset(s)
+assert t is s
+
+s = set([2, 3.45, "abc"])
+t = s.copy()                      # a copy
+assert t == set([2, 3.45, "abc"])
+assert s is not t
+
+s = frozenset([2, 3.45, "abc"])
+t = s.copy()                    # not a copy
+assert s is t
+
+s = set([2, 3.45, "abc"])                  # mutable
+t = s
+assert s is t
+s |= frozenset([6])
+assert type(s) is set
+assert s       == set([2, 3.45, "abc", 6])
+assert s       is t
+
+s = frozenset([2, 3.45, "abc"])                  # immutable
+t = s
+assert s is t
+s |= frozenset([6])
+assert type(s) is frozenset
+assert s       == frozenset([2, 3.45, "abc", 6])
+assert t       == frozenset([2, 3.45, "abc"])
+
+s = set()                          # sets only
 s.add(2)
 s.add(3.45)
 s.add("abc")
@@ -54,22 +94,6 @@ assert s <= t
 assert t >  s               # proper superset
 assert t >= s
 
-s = set([2, 3.45, "abc"])                  # mutable
-t = s
-assert s is t
-s |= frozenset([6])
-assert type(s) is set
-assert s       == set([2, 3.45, "abc", 6])
-assert s       is t
-
-s = frozenset([2, 3.45, "abc"])                  # immutable
-t = s
-assert s is t
-s |= frozenset([6])
-assert type(s) is frozenset
-assert s       == frozenset([2, 3.45, "abc", 6])
-assert t       == frozenset([2, 3.45, "abc"])
-
 s = frozenset([1, 2, 3, 5])
 t = frozenset([1, 2, 4, 6])
 assert (s | t) == frozenset([1, 2, 3, 4, 5, 6]) # union
@@ -81,21 +105,13 @@ assert (t - s) == frozenset([4, 6])
 assert (s ^ t) == frozenset([3, 5, 4, 6])       # symmetric difference
 assert (t ^ s) == frozenset([3, 5, 4, 6])
 
-s = frozenset([2, 3.45, "abc"])
-t = s.copy()                    # not a copy
-assert s is t
-
-s = set([2, 3.45, "abc"])
-t = s.copy()                      # a copy
-assert t == set([2, 3.45, "abc"])
-assert s is not t
-
 assert False is not 0
 assert False ==     0
 assert True  is not 1
 assert True  ==     1
 s = set((False, 0, True, 1, 2, 2L))
 assert s == set((False, True, 2))
+assert s == set((0, 1, 2L))
 
 class A (object) :
     pass
