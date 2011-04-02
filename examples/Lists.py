@@ -89,10 +89,9 @@ assert a == [1, 0, 5, 0, 9]
 
 a = [2, 3, 4]
 b = a
-c = a.reverse()
+a.reverse()
 assert a == [4, 3, 2]
 assert b == [4, 3, 2]
 assert a is b
-assert c is None
 
 print "Done."
