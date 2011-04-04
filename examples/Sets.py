@@ -76,11 +76,12 @@ s.add(2)
 assert len(s) == 3
 s.remove("abc")
 try :
-    s.remove("abc")                # key error
+    s.remove("abc")                 # key error
     assert False
 except KeyError, e:
-    assert len(e.args) == 1
-    assert e.args      == ("abc",)
+    assert type(e.args) is tuple
+    assert len(e.args)  == 1
+    assert e.args       == ("abc",)
 assert len(s) == 2
 
 s = frozenset([2, 3.45, "abc"]) # immutable

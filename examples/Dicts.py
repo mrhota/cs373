@@ -32,23 +32,26 @@ assert d       ==     {2 : "def", "abc" : 6.78, 3.45 : 3}
 
 d = {}
 try :
-    assert d[2] == None        # key error
+    assert d[2] == None          # key error
     assert False
 except KeyError, e:
-    assert len(e.args) == 1
-    assert e.args      == (2,)
+    assert type(e.args) is tuple
+    assert len(e.args)  == 1
+    assert e.args       == (2,)
 d[2]     = "ghi"
 d[3.45]  = 3
 d["abc"] = 6.78
 d[2]     = "def"
 assert len(d) == 3
-d.pop("abc")
+v = d.pop("abc")
+assert v == 6.78
 try :
-    d.pop("abc")                   # key error
+    d.pop("abc")                    # key error
     assert False
 except KeyError, e:
-    assert len(e.args) == 1
-    assert e.args      == ("abc",)
+    assert type(e.args) is tuple
+    assert len(e.args)  == 1
+    assert e.args       == ("abc",)
 assert len(d) == 2
 
 d = {2 : "abc", 3 : "def", 4 : "ghi"}
@@ -61,6 +64,7 @@ assert 3     in d
 assert 5 not in d
 
 d = {2 : "abc", 3 : None, 4 : "ghi"}
+assert len(d)   == 3
 assert d.get(3) == None
 assert d.get(5) == None
 

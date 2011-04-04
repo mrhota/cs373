@@ -44,6 +44,8 @@ assert A.v4              == 4
 assert A.__dict__["v4"]  == 4
 
 #A.__dict__.pop("v4") # AttributeError: 'dictproxy' object has no attribute 'pop'
+del A.v4
+assert not hasattr(A, "v4")
 
 x = A()
 y = A()

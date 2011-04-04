@@ -32,6 +32,33 @@ assert [] ==     []
 assert [] is not []
 assert () is     ()
 
+a = []
+a.append(2)
+a.append(3)
+a.append(4)
+assert len(a) == 3
+v = a.pop(1)
+assert v == 3
+assert len(a) == 2
+v = a.pop(1)
+assert v == 4
+assert len(a) == 1
+
+a = []
+a.extend([2])
+a.extend((3,))
+a.extend([4])
+assert len(a) == 3
+a.remove(2)
+assert len(a) == 2
+try :
+    a.remove(2)
+    assert False
+except ValueError, e:
+    assert type(e.args) is tuple
+    assert len(e.args)  == 1
+    assert e.args       == ('list.remove(x): x not in list',)
+
 a = [2, 3, 4];
 b = list(a)
 assert a ==     b
