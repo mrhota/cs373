@@ -19,23 +19,20 @@ final class A<T> { // extends Object
         _cv3 = _cv2 + 1;
     }}
 
-final class InstanceVariablesTest {
+final class InstanceVariables {
     public static void main (String[] args) {
         System.out.println("InstanceVariables.java");
 
-        {
         final A<Integer> x = new A<Integer>();
         assert x._v0 == null;
         assert x._v1 == 1;
         assert x._v2 == 2;
         assert x._v3 == 3;
-        }
 
-        {
-        final A<Integer> x = new A<Integer>();
         assert x._cv1 == 1;
         assert x._cv2 == 2;
         assert x._cv3 == 3;
-        }
+
+//      assert A<Integer>::_v0 == null; // illegal start of expression
 
         System.out.println("Done.");}}

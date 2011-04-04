@@ -53,12 +53,12 @@ main =
 --  assert ((init a) == [])     return () >> -- Prelude.head: empty list
     assert ((init b) == [2, 3]) return () >>
 
+--  assert ((tail a) == [])     return () >> -- Prelude.head: empty list
+    assert ((tail b) == [3, 4]) return () >>
+
     assert ((take 0 a) == [])     return () >>
 --  assert ((take 1 a) == [])     return () >> -- Prelude.head: empty list
     assert ((take 2 b) == [2, 3]) return () >>
-
---  assert ((tail a) == [])     return () >> -- Prelude.head: empty list
-    assert ((tail b) == [3, 4]) return () >>
 
     assert ((drop 0 a) == [])     return () >>
 --  assert ((drop 1 a) == [])     return () >> -- Prelude.head: empty list
@@ -66,20 +66,19 @@ main =
 
 --  assert ((a !! 0) == 0)     return () >> -- Prelude.(!!): index too large
     assert ((b !! 0) == 2)     return () >>
---  assert ((b !! 2) == 5)     return () >> -- Prelude.(!!): index too large
+--  assert ((b !! 3) == 5)     return () >> -- Prelude.(!!): index too large
 
-    assert ((elem 0 a) == False) return () >>
     assert ((elem 3 b) == True)  return () >>
     assert ((elem 5 b) == False) return () >>
-
-    assert ((reverse a) == [])        return () >>
-    assert ((reverse b) == [4, 3, 2]) return () >>
 
     assert ((1 : a) == [1])          return () >>
     assert ((1 : b) == [1, 2, 3, 4]) return () >>
 
     assert (([1] ++ a) == [1])          return () >>
     assert (([1] ++ b) == [1, 2, 3, 4]) return () >>
+
+    assert ((reverse a) == [])        return () >>
+    assert ((reverse b) == [4, 3, 2]) return () >>
 
     assert ([x * 2 | x <- a] == [])        return () >>
     assert ([x * 2 | x <- b] == [4, 6, 8]) return () >>

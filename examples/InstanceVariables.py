@@ -48,4 +48,9 @@ assert not hasattr(y, "v5")
 assert x.v5             == 5
 assert x.__dict__["v5"] == 5
 
+x.__dict__.pop("v5")
+assert not hasattr(x, "v5")
+
+#assert A.v1 == 1 # AttributeError: type object 'A' has no attribute 'v1'
+
 print "Done."
