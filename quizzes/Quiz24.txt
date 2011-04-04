@@ -1,0 +1,23 @@
+CS373: Quiz #24 (5 pts)
+
+--------------------------------------------------------------------------
+1. What is the multiplicity between Rental and Customer?
+   [RF: Ch. 1, pg. 2]
+   (1 pt)
+
+many to one
+
+--------------------------------------------------------------------------
+2. What is the first step in refactoring?
+   [RF: Ch. 1, pg. 7]
+   (1 pt)
+
+build a set of tests
+
+--------------------------------------------------------------------------
+3. What are the TWO kinds of glue that functional programming languages
+   provide?
+   [Why Functional Programming Matters]
+   (1 pt)
+
+higher-order functions and lazy evaluation
