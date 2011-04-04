@@ -4,6 +4,7 @@
 
 {-
 (>>)     :: IO a   -> IO b -> IO b  -- 'then' operator
+(==)     :: a      -> a    -> Bool
 (!!)     :: [a]    -> Int  -> a
 (:)      :: a      -> [a]  -> [a]
 (++)     :: [a]    -> [a]  -> [a]
