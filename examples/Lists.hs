@@ -4,9 +4,22 @@
 
 {-
 (>>)     :: IO a   -> IO b -> IO b  -- 'then' operator
+(!!)     :: [a]    -> Int  -> a
+(:)      :: a      -> [a]  -> [a]
+(++)     :: [a]    -> [a]  -> [a]
 assert   :: Bool   -> a    -> a
+drop     :: Int    -> [a]  -> [a]
+elem     :: a      -> [a]  -> Bool
+head     :: [a]            -> a
+init     :: [a]            -> [a]
+last     :: [a]            -> a
+length   :: [a]            -> Int
+null     :: [a]            -> Bool
 putStrLn :: String         -> IO ()
 return   :: a              -> IO a
+reverse  :: [a]            -> [a]
+tail     :: [a]            -> [a]
+take     :: Int    -> [a]  -> [a]
 -}
 
 import Control.Exception (assert)
