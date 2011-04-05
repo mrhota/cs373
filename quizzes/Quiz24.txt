@@ -18,6 +18,6 @@ build a set of tests
 3. What are the TWO kinds of glue that functional programming languages
    provide?
    [Why Functional Programming Matters]
-   (1 pt)
+   (2 pts)
 
 higher-order functions and lazy evaluation
