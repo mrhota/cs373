@@ -11,15 +11,17 @@ class My_Complex (object) :
         self.r = r
         self.i = i
 
-    def conjugate (self) :
-        self.i = -self.i
-        return self
-
     def __eq__ (self, rhs) :
+        if not isinstance(rhs, My_Complex) :
+            return False
         return (self.r == rhs.r) and (self.i == rhs.i)
 
     def __str__ (self) :
         return "(" + str(self.r) + ", " + str(self.i) + ")"
+
+    def conjugate (self) :
+        self.i = -self.i
+        return self
 
 def conjugate (v) :
     return My_Complex(v.r, v.i).conjugate()
