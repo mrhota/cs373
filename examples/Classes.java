@@ -44,6 +44,6 @@ final class Classes {
 
         final MyComplex t = z.conjugate();
         assert z.equals(new MyComplex(2, -3));
-        assert t == z;
+        assert z == t;
 
         System.out.println("Done.");}}

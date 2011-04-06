@@ -11,12 +11,14 @@ return   :: a              -> IO a
 
 import Control.Exception (assert)
 
-data A a =
-    A Int Double a
+data A a
+    = A Int Double a
     deriving (Eq)
 
-data Color =
-    Red | Blue | Green
+data Color
+    = Red
+    | Blue
+    | Green
     deriving (Eq)
 
 main :: IO ()

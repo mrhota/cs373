@@ -161,8 +161,8 @@ b = tuple(a)
 assert a is b
 
 a = [2, 3, 4];
-b = a[:]                  # a copy
-assert b ==     [2, 3, 4]
+b = a[:]          # a copy
+assert a ==     b
 assert a is not b
 
 a = (2, 3, 4)
@@ -210,7 +210,6 @@ a = [2, 3, 4]
 b = a
 a.reverse()
 assert a == [4, 3, 2]
-assert b == [4, 3, 2]
 assert a is b
 
 print "Done."

@@ -69,9 +69,9 @@ assert d.get(3) == None
 assert d.get(5) == None
 
 d = {2 : "abc", 3 : "def", 4 : "ghi"}
-e = d.copy()                                      # a copy
-assert e ==     {2 : "abc", 3 : "def", 4 : "ghi"}
-assert e is not d
+e = d.copy()                          # a copy
+assert d ==     e
+assert d is not e
 
 t = ("a", "b", "c")
 u = (2, 3, 4)

@@ -36,16 +36,16 @@ frozenset() is     frozenset()
 
 s = set([2, 3.45, "abc", 2])
 t = set(s)
-assert t ==     s
-assert t is not s
+assert s ==     t
+assert s is not t
 
 s = frozenset([2, 3.45, "abc", 2])
 t = frozenset(s)
-assert t is s
+assert s is t
 
 s = set([2, 3.45, "abc"])
-t = s.copy()                      # a copy
-assert t == set([2, 3.45, "abc"])
+t = s.copy()              # a copy
+assert s ==     t
 assert s is not t
 
 s = frozenset([2, 3.45, "abc"])
