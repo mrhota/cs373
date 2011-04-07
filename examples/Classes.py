@@ -34,12 +34,16 @@ assert z is not My_Complex(2, 3)
 assert z ==     My_Complex(2, 3)
 assert str(z) == "(2, 3)"
 
-v = z.conjugate()
+t = z.conjugate()
 assert z == My_Complex(2, -3)
-assert z is v
+assert z is t
 
-w = conjugate(z)
-assert z == My_Complex(2, -3)
-assert w == My_Complex(2,  3)
+t = My_Complex.conjugate(z)
+assert z == My_Complex(2, 3)
+assert z is t
+
+t = conjugate(z)
+assert z == My_Complex(2,  3)
+assert t == My_Complex(2, -3)
 
 print "Done."
