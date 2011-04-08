@@ -1,6 +1,6 @@
--- ----------
--- Classes.hs
--- ----------
+-- -----------
+-- Classes1.hs
+-- -----------
 
 {-
 (>>)     :: IO a   -> IO b -> IO b  -- 'then' operator
@@ -50,7 +50,7 @@ t = conjugate z
 
 main :: IO ()
 main =
-    putStrLn "Classes.hs" >>
+    putStrLn "Classes1.hs" >>
 
     assert (x        == My_Complex3 0 0)             return () >>
     assert ((show x) == "My_Complex {r = 0, i = 0}") return () >>
