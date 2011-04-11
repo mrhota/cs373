@@ -75,12 +75,8 @@ final class Inheritance {
         }
 
         {
-        final Shape[]                    a = new Circle[3];
-//      final ArrayList<Shape>           x = new ArrayList<Circle>(10); // error: incompatible types
-        final ArrayList<Circle>          x = new ArrayList<Circle>(10);
-        x.add(new Circle(2, 3, 4));
-        final ArrayList<? extends Shape> y = x;
-        assert y.get(0).area() == 3.14 * 4 * 4;
+        final Shape[]          a = new Circle[3];
+//      final ArrayList<Shape> x = new ArrayList<Circle>(10); // error: incompatible types
         }
 
         System.out.println("Done.");}}
