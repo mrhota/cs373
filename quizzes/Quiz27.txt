@@ -1,0 +1,13 @@
+CS373: Quiz #27 (5 pts)
+
+--------------------------------------------------------------------------
+1. What was Stroustrup's conclusion?
+   [What Should We Teach New Software Developers? Why?]
+   (4 pts)
+
+We must shrink the academia/industry gap by making changes on both sides.
+My suggestion is to define a structure of CS education based on a core plus
+specializations and application areas, aiming eventually at licensing of
+software artifacts and at least some of the CS professionals who produce
+them. This might go hand-in-hand with an emphasis on lifelong
+industry/academia involvement for technical experts.
