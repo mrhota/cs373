@@ -15,14 +15,14 @@ class Shape {
     public double area () {
         return 0;}
 
-    public final void move (int x, int y) {
+    public void move (int x, int y) {
         _x = x;
         _y = y;}
 
     public String toString () {
         return _x + ", " + _y;}}
 
-final class Circle extends Shape {
+class Circle extends Shape {
     private int _r;
 
     public Circle (int x, int y, int r) {

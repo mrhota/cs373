@@ -74,7 +74,6 @@ final class AbstractClasses {
         {
         final AbstractShape[]          a = new Circle[3];
 //      final ArrayList<AbstractShape> x = new ArrayList<Circle>(10);
-        final ArrayList<?>             x = new ArrayList<Circle>(10);
         }
 
         System.out.println("Done.");}}
