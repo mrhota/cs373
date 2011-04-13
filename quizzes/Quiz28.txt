@@ -1,0 +1,17 @@
+CS373: Quiz #28 (5 pts)
+
+--------------------------------------------------------------------------
+1. What Java feature enforces Remove Assignments to Parameters?
+   [http://www.refactoring.com/catalog/removeAssignmentsToParameters.html]
+   [RF: Ch. 6, pg. 132]
+   (2 pts)
+
+final
+
+--------------------------------------------------------------------------
+2. In Java which members of a class exhibit refinement overriding?
+   Which exhibit replacement overriding?
+   (2 pts)
+
+constructors
+everything else

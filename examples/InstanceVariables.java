@@ -33,6 +33,6 @@ final class InstanceVariables {
         assert x._cv2 == 2;
         assert x._cv3 == 3;
 
-//      assert A<Integer>::_v0 == null; // illegal start of expression
+//      assert A<Integer>._v0 == null; // illegal start of expression
 
         System.out.println("Done.");}}
