@@ -11,7 +11,7 @@ final class A<T> {      // extends Object
 
 //  public static final T cv; // error: non-static class T cannot be referenced from a static context
 
-//  public static final int cv0;     // error: variable cv3 might not have been initialized
+//  public static final int cv0;     // error: variable cv0 might not have been initialized
     public static final int cv0 = 0;
     public static final int cv1;
 
