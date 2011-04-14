@@ -34,7 +34,8 @@ class Circle (Shape) :
         return self.r
 
     def __str__ (self) :
-        return "(" + Shape.__str__(self) + ", " + str(self.r) + ")"
+        return "(" + super(Circle, self).__str__() + ", " + str(self.r) + ")"
+#       return "(" + Shape.__str__(self)           + ", " + str(self.r) + ")"
 
 class PseudoCircle (Shape) :
     def __init__ (self, r) :
