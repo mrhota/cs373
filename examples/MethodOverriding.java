@@ -7,14 +7,20 @@ class A {
         return "A.f";}
 
     public String g (int i) {
-        return "A.g";}}
+        return "A.g";}
+
+    public String h (int i) {
+        return "A.h";}}
 
 class B extends A {
-    public String f (String s) {
+    public String f (int i) {
         return "B.f";}
 
-    public String g (double d) {
-        return "B.g";}}
+    public String g (String s) {
+        return "B.g";}
+
+    public String h (double d) {
+        return "B.h";}}
 
 final class MethodOverriding {
     public static void main (String[] args) {
@@ -22,22 +28,29 @@ final class MethodOverriding {
 
         {
         A x = new A();
-        assert x.f(2) == "A.f";
-        assert x.g(3) == "A.g";
+        assert x.f(2)     == "A.f";
+        assert x.g(3)     == "A.g";
+//      assert x.g("abc") == "A.g"; // g(int) in A cannot be applied to (java.lang.String)
+        assert x.h(4)     == "A.h";
+//      assert x.h(5.67)  == "A.h"; // h(int) in A cannot be applied to (double)
         }
 
         {
         A x = new B();
-        assert x.f(2) == "A.f";
-        assert x.g(3) == "A.g";
+        assert x.f(2)     == "B.f";
+        assert x.g(3)     == "A.g";
+//      assert x.g("abc") == "B.g"; // g(int) in A cannot be applied to (java.lang.String)
+        assert x.h(4)     == "A.h";
+//      assert x.h(5.67)  == "B.h"; // h(int) in A cannot be applied to (double)
         }
 
         {
         B x = new B();
-        assert x.f(2)     == "A.f";
-        assert x.f("abc") == "B.f";
-        assert x.g(2)     == "A.g";
-        assert x.g(2.3)   == "B.g";
+        assert x.f(2)     == "B.f";
+        assert x.g(3)     == "A.g";
+        assert x.g("abc") == "B.g";
+        assert x.h(3)     == "A.h";
+        assert x.h(5.67)  == "B.h";
         }
 
         System.out.println("Done.");}}
