@@ -8,6 +8,7 @@ print "DoubleInheritance2.py"
 
 class A (object) :
     def __init__ (self) :
+        super(A, self).__init__()
         print "A.A()"
 
 class B (A) :
@@ -20,7 +21,7 @@ class C (A) :
         super(C, self).__init__()
         print "C.C()"
 
-class D (B, C) :
+class D (C, B) :
     def __init__ (self) :
         super(D, self).__init__()
         print "D.D()"

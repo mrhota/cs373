@@ -8,6 +8,7 @@ print "AbstractClasses.py"
 
 class AbstractShape (object) :
     def __init__ (self, x, y) :
+        super(AbstractShape, self).__init__()
         self.x = x
         self.y = y
 

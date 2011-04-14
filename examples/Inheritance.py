@@ -8,6 +8,7 @@ print "Inheritance.py"
 
 class Shape (object) :
     def __init__ (self, x, y) :
+        super(Shape, self).__init__()
         self.x = x
         self.y = y
 
