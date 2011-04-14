@@ -23,7 +23,8 @@ class AbstractShape (object) :
 
 class Circle (AbstractShape) :
     def __init__ (self, x, y, r) :
-        AbstractShape.__init__(self, x, y)
+        super(Circle, self).__init__(x, y) # doesn't mention AbstractShape
+#       AbstractShape.__init__(self, x, y)
         self.r = r
 
     def area (self) :
