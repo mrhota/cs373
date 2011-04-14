@@ -2,80 +2,58 @@
 // DynamicBinding.java
 // -------------------
 
-class Shape {
-    private int x;
-    private int y;
+class A {
+    public String f1 () {
+        return f2();}
 
-    public Shape (int x, int y) {
-        this.x = x;
-        this.y = y;}
+    public String f2 () {
+        return "A.f2";}
 
-    public double area () {
-        return area2();}
+    public String g1 () {
+        return g2();}
 
-    private double area2 () {
-        return 0;}
+    public static String g2 () {
+        return "A.g2";}
 
-    public final void move (int x, int y) {
-        this.x = x;
-        this.y = y;}
+    public String h1 () {
+        return h2();}
 
-    public String toString () {
-        return x + ", " + y;}}
+    private String h2 () {
+        return "A.h2";}}
 
-final class Circle extends Shape {
-    private int r;
+class B extends A {
+    public String f2 () {
+        return "B.f2";}
 
-    public Circle (int x, int y, int r) {
-        super(x, y);
-        this.r = r;}
+    public static String g2 () {
+        return "B.g2";}
 
-    public double area2 () {
-        return 3.14 * r * r;}
-
-    public int radius () {
-        return r;}
-
-    public String toString () {
-        return "(" + super.toString() + ", " + r + ")";}}
+    public String h2 () {
+        return "B.h2";}}
 
 final class DynamicBinding {
     public static void main (String[] args) {
-        System.out.println("DynamicBinding.java");
+        System.out.println("MethodOverriding.java");
 
         {
-        final Shape x = new Shape(2, 3);
-        assert x.area()   == 0;
-        x.move(5, 6);
-//      assert x.radius() == 0;
+        A x = new A();
+        assert x.f1() == "A.f2";
+        assert x.g1() == "A.g2";
+        assert x.h1() == "A.h2";
         }
 
         {
-        final Circle x = new Circle(2, 3, 4);
-        assert x.area()   == 0;
-        x.move(5, 6);
-        assert x.radius() == 4;
+        B x = new B();
+        assert x.f1() == "B.f2";
+        assert x.g1() == "A.g2";
+        assert x.h1() == "A.h2";
         }
 
         {
-        final Shape x = new Circle(2, 3, 4);
-        assert x.area()   == 0;
-        x.move(5, 6);
-//      assert x.radius() == 0;
-        assert ((Circle) x).radius() == 4;
-        }
-
-        {
-//      final Circle[] a = {new Shape(2, 3), new Circle(2, 3, 4)};
-        final Shape[]  a = {new Shape(2, 3), new Circle(2, 3, 4)};
-        assert a[0].area() == 0;
-        assert a[1].area() == 0;
-        }
-
-        {
-        final Shape[]          a = new Circle[3];
-//      final ArrayList<Shape> x = new ArrayList<Circle>(10);
-        final ArrayList<?>     x = new ArrayList<Circle>(10);
+        A x = new B();
+        assert x.f1() == "B.f2";
+        assert x.g1() == "A.g2";
+        assert x.h1() == "A.h2";
         }
 
         System.out.println("Done.");}}

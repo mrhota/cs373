@@ -36,21 +36,21 @@ final class MethodOverriding {
         }
 
         {
-        A x = new B();
-        assert x.f(2)     == "B.f";
-        assert x.g(3)     == "A.g";
-//      assert x.g("abc") == "B.g"; // g(int) in A cannot be applied to (java.lang.String)
-        assert x.h(4)     == "A.h";
-//      assert x.h(5.67)  == "B.h"; // h(int) in A cannot be applied to (double)
-        }
-
-        {
         B x = new B();
         assert x.f(2)     == "B.f";
         assert x.g(3)     == "A.g";
         assert x.g("abc") == "B.g";
         assert x.h(3)     == "A.h";
         assert x.h(5.67)  == "B.h";
+        }
+
+        {
+        A x = new B();
+        assert x.f(2)     == "B.f";
+        assert x.g(3)     == "A.g";
+//      assert x.g("abc") == "B.g"; // g(int) in A cannot be applied to (java.lang.String)
+        assert x.h(4)     == "A.h";
+//      assert x.h(5.67)  == "B.h"; // h(int) in A cannot be applied to (double)
         }
 
         System.out.println("Done.");}}
