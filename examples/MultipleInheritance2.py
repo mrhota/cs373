@@ -30,13 +30,12 @@ z = C()
 print "Done."
 
 """
-MultipleInheritance.py
+MultipleInheritance2.py
 A.A()
 
 B.B()
 
 A.A()
-B.B()
 C.C()
 Done.
 """
