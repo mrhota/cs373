@@ -43,11 +43,11 @@ class PseudoCircle (Shape) :
         self.r = r
 
 x = Shape(2, 3)
-assert x.area()         == 0
+assert x.area()          == 0
 x.move(5, 6)
-#assert x.radius()       == 0     # AttributeError: 'Shape' object has no attribute 'radius'
-#assert Circle.radius(x) == 0     # TypeError: unbound method radius() must be called with Circle instance as first argument (got Shape instance instead)
-assert str(x)           == "5, 6"
+#assert x.radius()       == 0      # AttributeError: 'Shape' object has no attribute 'radius'
+#assert Circle.radius(x) == 0      # TypeError: unbound method radius() must be called with Circle instance as first argument (got Shape instance instead)
+assert str(x)            == "5, 6"
 
 x = Circle(2, 3, 4)
 assert x.area()     == 3.14 * 4 * 4
