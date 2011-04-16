@@ -24,11 +24,11 @@ def atoi_aux (x, y) :
 def atoi (a) :
     return sum(map(atoi_aux, a[::-1], seq()))
 
-assert atoi("")     ==   0
-assert atoi("0")    ==   0
-assert atoi("1")    ==   1
-assert atoi("12")   ==  12
-assert atoi("123")  == 123
+assert atoi("")     ==    0
+assert atoi("0")    ==    0
+assert atoi("1")    ==    1
+assert atoi("12")   ==   12
+assert atoi("123")  ==  123
 assert atoi("2034") == 2034
 assert atoi("2304") == 2304
 assert atoi("2340") == 2340
