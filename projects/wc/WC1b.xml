@@ -1,0 +1,122 @@
+<world xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:noNamespaceSchemaLocation="WC1.xsd">
+	
+	<person>
+        <id>1</id>
+        <name>Renan Viegas</name>
+        <description>A consultant for donations and volunteer work for the Rio de Janiero 2011 flood.</description>
+        <social description="Renan Viegas on Twitter">http://twitter.com/renanviegas</social>
+		<social description="Renan Viegas on LinkedIn">http://www.linkedin.com/in/renanviegas</social>
+		<crisis crisis_id="4"/>
+    </person>
+
+
+    <organization>
+        <id>org1</id>
+        <name>Free West Papua Campaign</name>
+        <description>An organization based in the United Kingdom that is for the freedom of people in West Papua.</description>
+    </organization>
+
+    <organization>
+        <id>org2</id>
+        <name>West Papua Action</name>
+        <description>A solidarity and human rights organization begun in the United States to raise public awareness and change U.S. foreign policy to support justice, human rights and self-determination for West Papua.</description>
+    </organization>
+
+    <organization>
+        <id>org3</id>
+        <name>Free Papua Movement</name>
+        <description>Indigenous organization established to promote the secession of West Papua from Indonesia.</description>
+    </organization>
+
+    <organization>
+        <id>org4</id>
+        <name>Friends of Falun Gong</name>
+        <description>U.S. based non-profit organization concerned about the prosecution of Falun Gong practitioners.</description>
+    </organization>
+
+    <crisis>
+        <id>1</id>
+        <name>Political repression of West Paupans</name>
+        <kind>Genocide</kind>
+        <location coords="4 5S 137 11E">Western New Guinea</location>
+        <datetime>1961 - present</datetime>
+        <description>Since Indonesia gained control of West Papua from the Dutch, West Papuans have faced political repression from the Indoesian government, resulting in many killed and having their human rights violated. </description>
+        <human_impact>70,000-100,000 killed</human_impact>
+        <economic_impact>Transmigration program failed, failed to improve the situation of migrants, new location was not as productive.</economic_impact>
+        <resources></resources>
+        <help>http://www.freewestpapua.org/ holds various campaigns and have links for donations.</help>
+
+        <social description="Free West Papua on Facebook">http://www.facebook.com/profile.php?id=100000161647764</social>
+        <image description="Free West Papua Campaign">http://www.flickr.com/photos/freewestpapuauk/5364271296/</image>
+        <video description="Free West Papua Protest">http://www.youtube.com/watch?v=eU7sOlU6MLg</video>
+        <link description="West Papua Media Alerts">http://www.westpapuamedia.info/</link>
+		<organization organization_id="org1">Free West Papua Campaign</organization>
+		<organization organization_id="org2">West Papua Action</organization>
+		<organization organization_id="org3">Free Papua Movement</organization>
+    </crisis>
+
+    <crisis>
+        <id>2</id>
+        <name>2008 Sichuan Earthquake</name>
+        <kind>Genocide</kind>
+        <location coords="35 00N 103 00E">Sichuan, China</location>
+        <datetime>2008</datetime>
+        <description>A deadly earthquake of magniture 8.0Ms and 7.9Mw hit the province of Sichuan in China on May 12, 2008. It is also known as the Wenchuan earthquake after the location of its epicenter Wenchuan county. </description>
+        <human_impact>69,195 dead; 18,392 missing; 374,643 injured; 4.8 million homeless</human_impact>
+        <economic_impact>China's government planned to spend $146.5 billion dollars to rebuild the areas that were damaged.</economic_impact>
+        <resources></resources>
+        <help></help>
+
+        <image description="Earthquake Photo">http://www.flickr.com/photos/lingyang/2489921376/</image>
+        <video description="Security Camera Earthquake Footage">http://www.youtube.com/watch?v=yoKE_F1StIo</video>
+        <link description="West Papua Media Alerts">http://www.westpapuamedia.info/</link>
+        
+    </crisis>
+
+    <crisis>
+        <id>3</id>
+        <name>Persecution of Falun Gong practitioners</name>
+        <kind>Genocide</kind>
+        <location coords="35 00N 105 00E">China</location>
+        <datetime>1999 - ongoing</datetime>
+        <description>Practitionors of Falun Gong, meditation exercises, are now being persecuted by the Chinese Community Party. The decision was made by leader Jiang Zemin in 1999. There have been various means of persectuion from torture and forced labor to alleged organ harvesting.</description>
+        <human_impact>70,000-100,000 killed</human_impact>
+        <economic_impact></economic_impact>
+        <resources></resources>
+        <help></help>
+
+        <social description="Friends of Falun Gong">http://www.facebook.com/#!/group.php?gid=2213872979</social>
+		<social description="Falun Dafa on Twitter">http://twitter.com/falun_dafa</social>
+        <image description="Falun Gong Practitioner">http://www.flickr.com/photos/patrick_c/4916473542/</image>
+		<image description="Protest Against Falun Gong Persecution">http://www.flickr.com/photos/infomatique/3741247051/</image>
+        <video description="News Documentary on Falun Gong Persecution">http://www.youtube.com/watch?v=L0Hr8FmW4jA</video>
+		<video description="Documentary on Falun Gong Persecution">http://www.youtube.com/watch?v=9LPksYo2WUQ</video>
+        <link description="Falun Gong Human Rights Working Group">http://www.falunhr.org</link>
+		<link description="Falun Dafa Information Center">http://faluninfo.net/</link>
+        <organization organization_id="org4">Friends of Falun Gong</organization>
+    </crisis>
+	
+	<crisis>
+        <id>4</id>
+        <name>2011 Rio de Janiero floods and mudslides</name>
+        <kind>natural disaster</kind>
+        <location coords="22 54S 43 12W">Rio de Janiero, Brazil</location>
+        <datetime>January 2011</datetime>
+        <description>A series of floods and mudslides hit  several towns in the state of Rio de Janiero on January 11th, causing damage to homes and buildings as well as resulting in deaths.</description>
+        <human_impact>903 killed</human_impact>
+        <economic_impact>Damages totaled 2 billion Reais (1.2 billion U.S. Dollars).</economic_impact>
+        <resources></resources>
+        <help>Donations and volunteer work can be done to help out.</help>
+        <image description="Rio de Janiero 2011 Flood">http://commons.wikimedia.org/wiki/File:13012011VC8966.jpg</image>
+		<image description="Rio de Janiero 2011 Flood">http://commons.wikimedia.org/wiki/File:CasaDestruidaFriburgo2011.jpg</image>
+        <video description="Dramatic Rescue of Woman from Flood">http://www.youtube.com/watch?v=Y3vUw2L7Ik8</video>
+		<video description="News Clip of January Flood">http://www.youtube.com/watch?v=8pYes136qjs</video>
+		<link description="Ways to help;SOS Sierra - Deposit Accounts in Banks">https://spreadsheets.google.com/ccc?key=0AgFyYpLqVGL0dFROcmxyR3R3OUdFZi1NY1NUZnpqTVE&amp;hl=pt_BR</link>
+		<link description="Ways to help;SOS Sierra - Donations">https://spreadsheets.google.com/ccc?key=0AgFyYpLqVGL0dE1hWDZsSmlKS3BNQmRjR1hPU1lvTEE&amp;hl</link>
+		<link description="Ways to help;SOS Sierra - Volunteer Work Registration">https://spreadsheets.google.com/ccc?key=0AgFyYpLqVGL0dFZTcWJ4d3VDM0RuRVNIeFpGek9PR0E&amp;hl</link>
+        <link description="Red Cross - Branch Nova Iguacu">http://www.cruzvermelhani.org.br/</link>
+		<link description="UNIC - Information Centre of the United Nations in Brazil">http://unicrio.org.br/</link>
+    </crisis>
+
+</world>

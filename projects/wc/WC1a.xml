@@ -1,0 +1,681 @@
+<site>
+<people>
+    <person>
+        <name>Clara Barton</name>
+        <category>Red Cross founder</category>
+        <location>The Grave</location>
+	    <related><related_orgs>
+	        <org>American Red Cross</org>
+	    </related_orgs></related>
+        <media>
+	        <images>
+	            <link>
+	                <description>Picture of Sandra Bullock</description>
+	                <URL>http://wwwimage.cbsnews.com/images/2005/01/03/image664458g.jpg</URL>
+	            </link>
+    	    </images>
+	        <videos></videos>
+	        <external_links></external_links>
+	        <social_networks></social_networks>
+        </media>
+    </person>
+
+    <person>
+      <name>Sandra Bullock</name>
+      <category>Celebrity who made a large donation</category>
+      <location>Austin, TX</location>
+      <related>
+	<related_crises>
+	  <crisis>2004 Indonesia Earthquake/Tsunami</crisis>
+	  <crisis>Haiti Earthquake</crisis>
+	</related_crises>
+	<related_orgs>
+	  <org>American Red Cross</org>
+	</related_orgs>
+	<related_people>
+	  <person>Leonardo Dicaprio</person>
+	  <person>Jay Leno</person>
+	</related_people>
+      </related>
+      <media>
+	<images>
+	  <link>
+	    <description>Picture of Sandra Bullock</description>
+	    <URL>http://wwwimage.cbsnews.com/images/2005/01/03/image664458g.jpg</URL>
+	  </link>
+	</images>
+	<videos></videos>
+	<external_links></external_links>
+	<social_networks></social_networks>
+      </media>
+    </person>
+
+    <person>
+      <name>Leonardo Dicaprio</name>
+      <category>Celebrity who made a large donation</category>
+      <location>Los Angeles, CA</location>
+      <related>
+	<related_crises>
+	  <crisis>2004 Indonesia Earthquake/Tsunami</crisis>
+	  <crisis>Haiti Earthquake</crisis>
+	</related_crises>
+	<related_orgs>
+	  <org>UNICEF</org>
+	</related_orgs>
+	<related_people>
+	  <person>Sandra Bullock</person>
+	  <person>Jay Leno</person>
+	</related_people>
+      </related>
+      <media>
+	<images>
+	  <link>
+	    <description>Photo of Leonardo Dicaprio</description>
+	    <URL>http://img2.timeinc.net/people/i/2005/news/050117/ldicaprio.jpg</URL>
+	    </link>
+	</images>
+	<videos></videos>
+	<external_links>
+	  <link>
+	    <description>Homepage of the actor</description>
+	    <URL>http://leonardodicaprio.com/</URL>
+	  </link>
+	</external_links>
+	<social_networks></social_networks>
+	</media>
+    </person>
+
+    <person>
+      <name>Dilma Rousseff</name>
+      <category>President of Brazil</category>
+      <location>Brazil</location>
+      <related>
+	<related_crises>
+	  <crisis>2011 Rio de Janeiro floods</crisis>
+	</related_crises>
+	<related_orgs><org></org></related_orgs>
+	<related_people>
+	  <person>Michel Temer</person>
+	</related_people>
+      </related>
+      <media>
+	<images>
+	  <link>
+	    <description>Photo of Dilma Rousseff</description>
+	    <URL>http://upload.wikimedia.org/wikipedia/commons/8/81/Dilma_Rousseff_-_foto_oficial_2011-01-09.jpg</URL>
+	    </link>
+	</images>
+	<videos></videos>
+	<external_links>
+	  <link>
+	    <description>Wikipedia</description>
+	    <URL>http://en.wikipedia.org/wiki/Dilma_Rousseff</URL>
+	  </link>
+	</external_links>
+	<social_networks></social_networks>
+	</media>
+      </person>      
+</people>
+
+<organizations>
+    <organization>
+      <name>American Red Cross</name>
+      <category>Emergency Response Organization</category>
+      <location>Worldwide</location>
+      <phone_number>1-800 RED CROSS</phone_number>
+      <history> Since its founding in 1881 by visionary leader Clara Barton, the American Red Cross has been the nation's premier emergency response organization. As part of a worldwide movement that offers neutral humanitarian care to the victims of war, the American Red Cross distinguishes itself by also aiding victims of devastating natural disasters. Over the years, the organization has expanded its services, always with the aim of preventing and relieving suffering.
+
+Today, in addition to domestic disaster relief, the American Red Cross offers compassionate services in five other areas: community services that help the needy; support and comfort for military members and their families; the collection, processing and distribution of lifesaving blood and blood products; educational programs that promote health and safety; and international relief and development programs.
+
+The American Red Cross is where people mobilize to help their neighbors—across the street, across the country, and across the world—in emergencies. Each year, in communities large and small, victims of some 70,000 disasters turn to neighbors familiar and new—the more than half a million volunteers and 35,000 employees of the Red Cross. Through nearly 700 locally supported chapters, more than 15 million people gain the skills they need to prepare for and respond to emergencies in their homes, communities and world. Some four million people give blood—the gift of life—through the Red Cross, making it the largest supplier of blood and blood products in the United States. And the Red Cross helps thousands of U.S. service members separated from their families by military duty stay connected. As part of the International Red Cross and Red Crescent Movement, a global network of 186 national societies, the Red Cross helps restore hope and dignity to the world's most vulnerable people.
+
+An average of 91 cents of every dollar the Red Cross spends is invested in humanitarian services and programs.</history>
+      <resources_needed>Donations of time, money and blood</resources_needed>
+      <related>
+	<related_crises>
+	  <crisis>Tornadoes</crisis>
+	  <crisis>Floods</crisis>
+	</related_crises>
+	<related_orgs>
+	  <org>UNICEF</org>
+	  <org>WorldVision</org>
+	  <org>IRC</org> 
+	  <org>MedAir</org>
+	</related_orgs>
+	<related_people><person>Clara Barton</person></related_people>
+      </related>
+      <media>
+	<images></images>
+	<videos></videos>
+	<external_links>
+	  <link>
+	    <description>American RedCross homepage</description>
+	    <URL>http://www.redcross.org/</URL>
+	  </link>
+	  </external_links>
+	<social_networks>
+	  <link>
+	    <description>Facebook</description>
+	    <URL>http://www.facebook.com/home.php#!/redcross</URL>
+	    </link>
+	  </social_networks>
+	</media>
+    </organization>
+    
+    <organization>
+      <name>Doctors Without Borders</name>
+      <category>International Medical Humanitarian Organization</category>
+      <location>Worldwide</location>
+      <phone_number>212-679-6800</phone_number>
+      <history>Doctors Without Borders/Médecins Sans Frontières (MSF) provides aid in nearly 60 countries to people whose survival is threatened by violence, neglect, or catastrophe, primarily due to armed conflict, epidemics, malnutrition, exclusion from health care, or natural disasters. MSF provides independent, impartial assistance to those most in need. MSF reserves the right to speak out to bring attention to neglected crises, to challenge inadequacies or abuse of the aid system, and to advocate for improved medical treatments and protocols.
+	In 2007 over 26,000, mostly local, doctors, nurses and other medical professionals, logistical experts, water and sanitation engineers and administrators provided medical aid in over 60 countries. Private donors provide about 85% of the organization's funding, while governmental and corporate donations provide the rest, giving MSF an annual budget of approximately US$400 million. The organization actively provides health care and medical training to populations in about 70 countries, and frequently insists on political responsibility in conflict zones such as Chechnya and Kosovo. Only once in its history, during the 1994 genocide in Rwanda, has the organisation called for military intervention. In order to be able to speak and act freely, MSF remains independent of any political, religious or economic powers. The majority of MSF activities are paid for with private donations.</history>
+      <resources_needed>Independent private funding</resources_needed>
+      <related>
+	<related_crises>
+	  <crisis>Armed conflict</crisis>
+	  <crisis>Epidemics</crisis>
+	  <crisis>Malnutrition</crisis>
+	  <crisis>Exclusion from health care</crisis>
+	  <crisis>Natural Disasters</crisis>
+	</related_crises>
+	<related_orgs>
+	  <org>UNICEF</org>
+	  <org>Red Cross</org>
+	  <org>WorldVision</org>
+	  <org>IRC</org>
+	  <org>MedAir</org>
+	</related_orgs>
+	<related_people><person></person></related_people>
+      </related>
+      <media>
+	<images></images>
+	<videos></videos>
+	<external_links>
+	  <link>
+	    <description>Doctors Without Borders homepage</description>
+	    <URL>http://www.doctorswithoutborders.org/</URL>
+	  </link>
+	  </external_links>
+	<social_networks>
+	  <link>
+	    <description>Facebook</description>
+	    <URL>http://www.facebook.com/home.php#!/group.php?gid=12242984962</URL>
+	    </link>
+	  </social_networks>
+	</media>
+    </organization>
+    
+    <organization>
+      <name>UNICEF</name>
+      <category>Emergency Response Organization</category>
+      <location>Worldwide</location>
+      <phone_number>1-800-367-5437</phone_number>
+      <history>UNICEF was created by the United Nations General Assembly on December 11, 1946, to provide emergency food and healthcare to children in countries that had been devastated by World War II. In 1953, UNICEF became a permanent part of the United Nations System and its name was shortened from the original United Nations International Children's Emergency Fund but it has continued to be known by the popular acronym based on this old name. Headquartered in New York City, UNICEF provides long-term humanitarian and developmental assistance to children and mothers in developing countries. 
+	UNICEF relies on contributions from governments and private donors and UNICEF's total income for 2006 was $2,781,000,000. Governments contribute two thirds of the organization's resources; private groups and some 6 million individuals contribute the rest through the National Committees. UNICEF's programs emphasize developing community-level services to promote the health and well-being of children. UNICEF was awarded the Nobel Peace Prize in 1965 and the Prince of Asturias Award of Concord in 2006. Most of UNICEF's work is in the field, with staff in over 190 countries and territories. More than 200 country offices carry out UNICEF's mission through a program developed with host governments. Seven regional offices provide technical assistance to country offices as needed.</history>
+      <resources_needed>Contributions from governments and private donors</resources_needed>
+      <related>
+	<related_crises>
+	  <crisis>HIV/AIDS</crisis>
+	</related_crises>
+	<related_orgs>
+	  <org>Red Cross</org> 
+	  <org>WorldVision</org>
+	  <org>IRC</org>
+	  <org>MedAir</org>
+	</related_orgs>
+	<related_people><person></person></related_people>
+      </related>
+      <media>
+	<images></images>
+	<videos></videos>
+	<external_links>
+	  <link>
+	    <description>Unicef homepage</description>
+	    <URL>http://www.unicef.org/</URL>
+	  </link>
+	  </external_links>
+	<social_networks>
+	  <link>
+	    <description>Facebook</description>
+	    <URL>http://www.facebook.com/home.php#!/unicef</URL>
+	    </link>
+	  </social_networks>
+	</media>
+    </organization>
+</organizations>
+
+<crises>
+  <crisis>
+    <name>Global Warming</name>
+    <category>Natural/Manmade</category>
+    <location>Earth</location>
+    <date>Ongoing</date>
+
+    <description>Global warming is the increase of the average temperature of Earth's near-surface air and oceans.  The release of certain chemicals/greenhouse gases into the air is causing a blanket that is keeping more heat in the atmosphere than normal.  This is causing a melting of the polar icecaps, snow and ice, and could possibly cause species extinction, extreme weather, or a lowered amount of agricultural yield.  Though many scientists back the claim that this climate shift exists and humans are contributing to it by no small amount, there are also many scientists and non-scientists who disagree.
+    </description>
+    <human_impact>
+        The climate shift and the change of temperature in the oceans could cause an increase in both the frequency and power of hurricanes.  Increased temperature could cause higher levels of drought and heat waves, and so people in certain parts of the world (namely Africa) will have an even harder time finding water.  Even things such as baseball bats are in danger from global warming, since the trees generally used to make baseball bats are dying out in part because of global warming.    
+    </human_impact>
+
+    <economic_impact>  
+      If the hurricane rate/strength does increase, this means more damages (and thus high costs of rebuilding) to cities affected by these hurricanes. 
+     
+      Due to the evaporation of the oceans at a higher rate, precipition would increase, which could cause a lower agricultural 
+      yield. Increased temperatures in some places due to the heat could also cause droughts, also lowering agricultural yield.  Lower agricultural yield 
+      would mean increased food prices.
+      Water would become an even bigger commodity in places where it is very scarce.
+    </economic_impact>
+    <resources_needed>In order to reduce carbon dioxide emissions by 50% from 2008 levels(a goal set by the International Energy Agency), 
+                a projected $45 trillion in financing will be needed over the next 40 years.
+    </resources_needed>
+
+    <ways_to_help>
+      <way>Turn off your TV, lights, and other conserve electricity where you can.</way>
+      <way>Don't use aerosols, which are bad for the environment.</way>
+    </ways_to_help>
+    <related>
+       <related_crises>
+	 <crisis>Hurricane Andrew</crisis>
+	 <crisis>Water Crisis</crisis>
+       </related_crises>
+       <related_orgs>
+	 <org>Global Warming International Center</org>
+       </related_orgs>
+       <related_people>
+	 <person>Al Gore</person>
+	 <person>Bill Nye</person>
+       </related_people>
+    </related>
+    <media>
+     
+    <images>
+        <link>
+            <description>Imgur</description>
+            <URL>http://www.imgur.com</URL>
+        </link>
+        <link>
+            <description>Flickr</description>
+            <URL>http://www.flickr.com</URL>
+        </link>
+    </images>
+    
+    <videos>
+        <link>
+            <description>Youtube</description>
+            <URL>http://www.youtube.com</URL>
+        </link>
+    </videos>
+
+    <external_links>
+        <link>
+            <description>Wikipedia</description>
+            <URL>http://www.wikipedia.com</URL>
+        </link>
+    </external_links>
+    
+    
+    <social_networks>
+        <link>
+            <description>Facebook</description>
+            <URL>http://www.facebook.com</URL>
+        </link>
+    </social_networks>
+    
+    </media>
+  </crisis>
+ <crisis>
+    <name>2004 Indian Ocean Earthquake/Tsunami</name>
+    <category>Natural Disaster</category>
+    <location>Epicenter off the west coast of Sumatra, Indonesia</location>
+    <date>December 26, 2004</date>
+
+    <description>The earthquake was caused by subduction and triggered a series of devastating tsunamis along the coasts of most landmasses bordering the Indian Ocean, killing over 230,000 people in fourteen countries, and inundating coastal communities with waves up to 30 meters(100 feet) high. It was one of the deadliest natural disasters in recorded history. Indonesia was the hardest hit, followed by Sri, Lanka, India, and Thailand. With a magnitude of between 9.1 and 9.3, it is the third largest earthquake ever recorded on a seismograph. This earthquake had the longest duration of faulting ever observed, between 8.3 and 10 minutes. It caused the entire planet to vibrate as much as 1 cm (0.4 inches) and triggered other earthquakes as far away as Alaska.
+    </description>
+    <human_impact>
+        
+        Measured in lives lost, this is one of the ten worst earthquakes in recorded history, as well as the single worst tsunami in history.
+	 Indonesia was the worst affected area, with a death toll estimate of around 170,000. 
+	 The Tsunami caused deaths as far as the east coast of Africa, up to 8,000 km (4,971 miles) away from the epicenter.
+	 Approximately one third of the dead appeared to be children.
+	 In addition to the local residents, an approximate 9,000 foreign tourists were among the dead or missing.
+	In total it has been estimated the the number of estimated lives lost is between 230,000 and 280,000.
+          
+    </human_impact>
+
+    <economic_impact>  
+      Preliminary estimates indicate that 66% of the fishing fleet and industrial infrastructure in coastal regions have been destroyed by the wave surges, which will have adverse economic effects both at local and national levels. But some economists believe that damage to the affected national economies will be minor because losses in the tourism and fishing industries are a relatively small percentage of the GDP. However, others caution that damage to infrastructure is an overriding factor.
+      In some areas drinking water supplies and farm fields may have been contaminated for years by salt water from the ocean.
+      Countries in the region appealed to tourists to return, pointing out that most tourist infrastructure is undamaged. However, tourists were reluctant to do so for psychological reasons. Even beach resorts in parts of Thailand which were completely untouched by the tsunami were hit by cancellations.
+    </economic_impact>
+    <resources_needed>The main concern of humanitarian and government agencies was to provide sanitation facilities and fresh drinking water to contain the spread of diseases such as cholera, diphtheria, dysentery, typhoid, and hepatitis A and B. In the days following the tsunami, significant effort was spent in burying bodies hurriedly for fear of disease. However, the public health risks may have been exaggerated, and therefore this may not have been the best way to allocate resources. The World Food Programme provided food aid to more than 1.3 million people affected by the tsunami. There was also a great concern that the death toll could increase as disease and hunger spread. However, because of the initial quick response, this was minimized.
+
+    </resources_needed>
+
+    <ways_to_help>
+      <way>Address:
+	   American Red Cross
+           PO BOX 4002018
+           Des Moines, IA 50340-2018</way>
+      <way>Address:
+	   Food For the Hungry
+	   1224 E. Washington St.
+	   Phoenix, AZ 85034</way>
+      <way>Address:
+	   U.S. Fund for UNICEF
+	   125 Maiden Lane
+	   New York, NY 10038</way>
+      <way>Phone Number: Red Cross- 1-800-RED CROSS</way>
+      <way>Text Number: Red Cross- Text REDCROSS to 90999 to donate $10</way>
+      <way>Phone Number: UNICEF- 1-800-367-5437</way>
+      <way></way>
+    </ways_to_help>
+    <related>
+       <related_crises>
+	 <crisis>Hurricane Katrina</crisis>
+	 <crisis>Haiti Earthquake</crisis>
+       </related_crises>
+       <related_orgs>
+	 <org>AmeriCares</org>
+	 <org>Direct Relief International</org>
+	 <org>Doctors Without Borders USA</org>
+	 <org>Heart to Heart International</org>
+	 <org>Islamic Relief USA</org>
+	 <org>Save the Children</org>
+	 <org>United States Fund for UNICEF</org>
+	 <org>World Vision</org>
+	 <org>International Relief Teams</org>
+	 <org>Refugees International</org>
+	 <org>International Medical Corps</org>
+	 <org>CARE</org>
+	 <org>American Red Cross</org>
+	 <org>IRC</org>
+	 <org>Oxfam</org>
+       </related_orgs>
+       <related_people>
+	 <person>Sandra Bullock</person>
+	 <person>Leonardo Dicaprio</person>
+	 <person>Carl Lindner</person>
+	 <person>Maria Sharapova</person>
+	 <person>Steven Spielberg</person>
+	 <person>Jackie Chan</person>
+	 <person>Jay Leno</person>
+	 <person>Linkin Park</person>
+	 <person>Michael Schumacher</person>
+       </related_people>
+    </related>
+    <media>
+     
+    <images>
+        <link>
+            <description>Do Something</description>
+            <URL>http://www.dosomething.org/files/pictures/december%2004%20tsunami.jpg</URL>
+        </link>
+        <link>
+            <description>Lunch</description>
+            <URL>http://media.lunch.com/d/d7/383894.jpg?2</URL>
+        </link>
+	<link>
+            <description>Asia ImagesLunch</description>
+            <URL>http://mm04.nasaimages.org/MediaManager/srvr?mediafile=/Size4/nasaNAS-10-NA/71817/IK_Aceh_zoom_in_new_d.jpg</URL>
+        </link>
+	<link>
+	  <description>Tsunami</description>
+	  <URL>http://www.malibumade.com/images/tsunami1.jpg</URL>
+	</link>
+	<link>
+            <description>Michael Brown</description>
+            <URL>http://michaelbrowntoday.com/storage/Tsunami%20wtmk.jpg?__SQUARESPACE_CACHEVERSION=1237516864941</URL>
+        </link>
+    </images>
+    
+    <videos>
+        <link>
+            <description>Youtube</description>
+            <URL>http://www.youtube.com/watch?v=RDOuwMj7Xzo</URL>
+        </link>
+	<link>
+            <description>ABCnews</description>
+            <URL>http://abcnews.go.com/Archives/video/dec-26-2004-earthquake-triggers-tsunami-12469813</URL>
+        </link>
+	<link>
+            <description>Youtube</description>
+            <URL>http://www.youtube.com/watch?v=w3OCovnVNLM</URL>
+        </link>
+	<link>
+            <description>Youtube</description>
+            <URL>http://www.youtube.com/watch?v=FCWfRs1frYE</URL>
+        </link>
+    </videos>
+
+    <external_links>
+        <link>
+            <description>World Vision</description>
+            <URL>https://www.worldvision.ca/home/give-a-gift/asia-tsunami/; </URL>
+        </link>
+	<link>
+            <description>India Aid</description>
+            <URL>http://www.aidindia.org/main/; </URL>
+        </link>
+	<link>
+            <description>Action Aid</description>
+            <URL>http://www.actionaid.org </URL>
+        </link>
+	<link>
+            <description>Muslim Aid</description>
+            <URL>http://www.muslimaid.org</URL>
+        </link>
+	<link>
+            <description>International Rescue Committee</description>
+            <URL>http://www.rescue.org/</URL>
+        </link>
+	<link>
+            <description>Concern Worldwide</description>
+            <URL>http://www.concern.net</URL>
+        </link>
+	<link>
+            <description>MEDAIR Emergency Relief</description>
+            <URL>http://www.medair.org</URL>
+        </link>
+	<link>
+            <description>tearfund</description>
+            <URL>http://www.tearfund.org</URL>
+        </link>
+	<link>
+            <description>unicef</description>
+            <URL>http://www.unicef.org</URL>
+        </link>
+	<link>
+            <description>American Red Cross</description>
+            <URL>http://www.redcross.org</URL>
+        </link>
+	<link>
+            <description>Doctor's Without Borders</description>
+            <URL>http://www.doctorswithoutborders-usa.org/donate/</URL>
+        </link>
+	<link>
+	  <description>Wikipedia</description>
+            <URL>http://en.wikipedia.org/wiki/2004_indian_ocean_earthquake#Humanitarian.2C_economic_and_environmental_impact</URL>
+        </link>
+	<link>
+            <description>food for the hungry</description>
+            <URL>http://www.fh.org/learn/news/disaster/erindonesia</URL>
+        </link>
+    </external_links>
+    
+    
+    <social_networks>
+        <link>
+            <description>Facebook</description>
+            <URL>http://www.facebook.com/pages/2004-Sumatra-Indonesia-Earthquake/106959662674353 </URL>
+        </link>
+	<link>
+            <description>Facebook</description>
+            <URL>http://www.facebook.com/pages/Impact-of-2004-Indian-Ocean-earthquake-on-Indonesia/139671962717751  </URL>
+        </link>
+	<link>
+            <description>Facebook</description>
+            <URL>http://www.facebook.com/group.php?gid=149020864267 </URL>
+        </link>
+	<link>
+            <description>Facebook</description>
+            <URL>http://www.facebook.com/group.php?gid=158337982472  </URL>
+        </link>
+	<link>
+            <description>Facebook</description>
+            <URL>http://www.facebook.com/group.php?gid=45101076174  </URL>
+        </link>
+	<link>
+            <description>Facebook</description>
+            <URL>http://www.facebook.com/group.php?gid=8841827953 </URL>
+        </link>
+    </social_networks>
+    
+    </media>
+</crisis>
+<crisis>
+    <name>2011 Rio de Janeiro Floods</name>
+    <category>Natural Disaster</category>
+    <location>Rio de Janeiro, Brazil</location>
+    <date>January 12, 2011</date>
+
+    <description>Several floods and mudslides occurred in the Brazilian state of Rio de Janeiro in January 2011. Several towns near the Mountainous Region (Regiao Serrana) were affected. Some of these cities affected were Nova Druburgo, Sumidouro, and Sao Jose do Vale do Rio Preto. These floods were caused by the rain that fell on the 12th of January. The amount of rain that was recorded was more than what was expected for an entire month. Because of this, many of the areas previously mentioned experienced floods and mudslides. 
+    </description>
+    <human_impact>
+        
+       Many deaths occurred due to the floods. At least 471 people were killed and more than 4,600 people were left homeless due to the disaster. Fields that were destroyed caused many farmers to lose income. 
+        
+    </human_impact>
+
+    <economic_impact>  
+      The floods caused the government to create a 466.2 million dollar budget available for reconstruction. Crops that were destroyed caused the prices of vegetables to rise. For examle, lettuces were being sold for three times the regular value.
+    </economic_impact>
+
+    <resources_needed>The $466.2 million budget was one of the many resources needed. Community organizations, such as churches, provided water and cooked meals for those who were left homeless. </resources_needed>
+
+    <ways_to_help>
+      <way>Donate to Doctors Without Borders: https://donate.doctorswithoutborders.org/</way>
+      <way>Donate to UNICEF: http://www.unicefusa.org/</way>
+    </ways_to_help>
+    <related>
+       <related_crises>
+	 <crisis>Hurricane Andrew</crisis>
+	 <crisis>Hurricane Katrina</crisis>
+       </related_crises>
+       <related_orgs>
+	 <org>Doctors Without Borders</org>
+	 <org>UNICEF</org>
+       </related_orgs>
+       <related_people>
+	 <person>Dilma Rousseff</person>
+       </related_people>
+    </related>
+    <media>
+     
+    <images>
+        <link>
+            <description>Flood Aftermath</description>
+            <URL>https://picasaweb.google.com/lh/view?q=brazilian+floods+2011</URL>
+        </link>
+        <link>
+            <description>Flickr</description>
+            <URL>http://www.flickr.com/search/?q=brazilian++2011+flood</URL>
+        </link>
+    </images>
+    
+    <videos>
+        <link>
+            <description>Youtube</description>
+            <URL>http://www.youtube.com/watch?v=K_kSKPARDL8</URL>
+        </link>
+	 <link>
+            <description>Youtube</description>
+            <URL>http://www.youtube.com/watch?v=j_ZfM06qY0k</URL>
+        </link>
+	  <link>
+            <description>CNN</description>
+            <URL>http://www.cnn.com/video/?/video/world/2011/01/20/ctw.darlington.brazil.cnn</URL>
+        </link>
+    </videos>
+
+    <external_links>
+        <link>
+            <description>Wikipedia</description>
+            <URL>http://en.wikipedia.org/wiki/January_2011_Rio_de_Janeiro_floods_and_mudslides</URL>
+        </link>
+	<link>
+            <description>bbc</description>
+            <URL>http://www.bbc.co.uk/news/world-latin-america-12200299</URL>
+        </link>
+    </external_links>    
+    
+    <social_networks>
+        <link>
+            <description>Facebook</description>
+            <URL>http://www.facebook.com/pages/January-2011-Rio-de-Janeiro-floods-and-mudslides/147337775321678</URL>
+        </link>
+    </social_networks>
+    
+    </media>
+  </crisis>
+    <crisis>
+        <name> Colombian flooding</name>
+        <category> natural disaster: flooding</category>
+        <location> Colombia</location>
+        <date> November 2010 - ongoing </date>
+        <description> Unusually heavy rains have caused persistent flooding throughout much of Colombia </description>
+        <human_impact> 174 dead, 225 wounded, 19 others missing, and 1.5 million left homeless, 
+        296,256 acres of crops had been lost as of Dec. 8, 2010 </human_impact>
+        <economic_impact> over $6 billion - 1.5 million homes were destroyed, the Canal Dike was ruptured </economic_impact>
+        <resources_needed> money for rebuilding, emergency housing, food, blankets, medical supplies </resources_needed>
+        <ways_to_help> 
+            <way> http://www.conexioncolombia.com/how-to-help-colombias-flood-victims.html </way> 
+            <way> http://www.justgiving.com/colombian-flood-relief </way>
+        </ways_to_help> 
+        <related>
+            <related_orgs>
+                <org> Colombian Government </org>
+                <org> OxFam </org>
+                <org> American Red Cross </org>
+            </related_orgs>
+            <related_people>
+                <person> Juan Manuel Santos </person>
+                <person> Beatriz Uribe Botero </person>
+                <person> Barack Obama </person>
+            </related_people>
+        </related>
+        <media>
+            <images> 
+                <link>
+                    <description>Picture of the flooding</description>
+                    <URL>http://worldtravelalert.net/wp-content/uploads/2010/11/Colombia-Floods.jpg </URL>
+                </link>
+                <link>
+                    <description>Picture of the flooding</description>
+                    <URL>http://nimg.sulekha.com/others/original700/colombia-floods-2009-4-2-17-1-31.jpg </URL>
+                </link>
+                <link>
+                    <description>Picture of the flooding</description>
+                    <URL>http://news.bbcimg.co.uk/media/images/48288000/jpg/_48288043_jex_744804_de03-1.jpg </URL>
+                </link>
+                <link>
+                    <description>Picture of the flooding</description>
+                     <URL>http://news.bbcimg.co.uk/media/images/48288000/jpg/_48288043_jex_744804_de03-1.jpg </URL>
+                 </link>
+             </images>
+             <videos></videos>
+             <external_links>
+                <link>
+                    <description> Site to provide aid </description>
+                    <URL>http://www.conexioncolombia.com/how-to-help-colombias-flood-victims.html </URL>
+                </link>
+            </external_links>
+            <social_networks> 
+                <link>
+                    <description> Twitter hashtag search for "inundaciones" and "Colombia" </description>
+                    <URL>http://twitter.com/#!/search/%23inundaciones%20%23Colombia </URL>
+                </link>
+            </social_networks> 
+        </media>
+    </crisis>
+</crises>
+</site>

@@ -1,0 +1,144 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="world" type="worldType">
+    <xs:keyref name="personNumKeyRef" refer="personNumKey">
+      <xs:selector xpath="*/*"/>
+      <xs:field xpath="@person_id"/>
+      <!-- name in the attribute for this -->
+    </xs:keyref>
+    <xs:key name="personNumKey">
+      <xs:selector xpath="./person"/>
+      <!-- where is this ref ./ means current directory .// means current directory or
+      sub directory of that ie crisisType->person is included-->
+      <xs:field xpath="id"/>
+      <!-- what element is it -->
+    </xs:key>
+    <xs:keyref name="organizationNumKeyRef" refer="organizationNumKey">
+      <xs:selector xpath="*/*"/>
+      <xs:field xpath="@organization_id"/>
+    </xs:keyref>
+    <xs:key name="organizationNumKey">
+      <xs:selector xpath="./organization"/>
+      <xs:field xpath="id"/>
+    </xs:key>
+    <xs:keyref name="crisisNumKeyRef" refer="crisisNumKey">
+      <xs:selector xpath="*/*"/>
+      <xs:field xpath="@crisis_id"/>
+    </xs:keyref>
+    <xs:key name="crisisNumKey">
+      <xs:selector xpath="./crisis"/>
+      <xs:field xpath="id"/>
+    </xs:key>
+  </xs:element>
+
+  <!-- location can have an optional coordinates attribute
+     this was added in case we wanted to feed it to a Maps API
+     (eg: Google) and have it show a map -->
+
+  <xs:complexType name="locationType" mixed="true">
+    <xs:attribute name="coords" type="xs:string" use="optional"/>
+  </xs:complexType>
+
+  <!-- describableTypes can have an optional description attribute !-->
+  <xs:complexType name="describableType" mixed="true">
+    <xs:attribute name="description" type="xs:string" use="optional"/>
+  </xs:complexType>
+
+  <xs:complexType name="dateType">
+    <xs:sequence>
+      <xs:element name="start" type="xs:date"/>
+      <xs:element name="end" type="xs:date" minOccurs="0"/>
+      <!-- the abscence of an end date means it's current-->
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- world is our root element (eg: dataset) -->
+  <xs:complexType name="worldType">
+    <xs:sequence>
+      <xs:element name="person" type="personType" maxOccurs="unbounded"/>
+      <xs:element name="organization" type="organizationType" maxOccurs="unbounded"/>
+      <xs:element name="crisis" type="crisisType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="personIdType" mixed="true">
+    <xs:attribute name="person_id" type="xs:string"/>
+  </xs:complexType>
+  <xs:complexType name="organizationIdType" mixed="true">
+    <xs:attribute name="organization_id" type="xs:string"/>
+  </xs:complexType>
+  <xs:complexType name="crisisIdType">
+    <xs:attribute name="crisis_id" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:complexType name="crisisType">
+    <xs:sequence>
+      <xs:element name="id" type="xs:string" />
+      <xs:element name="name" type="xs:string" />
+      <xs:element name="kind" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="location" type="locationType" />
+
+      <xs:element name="datetime" type="dateType" />
+      <xs:element name="description" type="xs:string" />
+      <xs:element name="human_impact" type="xs:string" />
+      <xs:element name="economic_impact" type="xs:string" />
+
+      <xs:element name="resources" type="xs:string" /><!-- this is "ways to help" -->
+      <xs:element name="help" type="xs:string" />
+
+      <xs:element name="social" type="describableType" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="image" type="describableType" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="video" type="describableType" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="link" type="describableType" minOccurs="0" maxOccurs="unbounded" />
+
+      <xs:element name="related_crisis" type="crisisIdType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="organization" type="organizationIdType" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="person" type="personIdType" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="personType">
+    <xs:sequence>
+      <xs:element name="id" type="xs:string"/>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="kind" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="location" type="locationType" minOccurs="0"/>
+
+      <xs:element name="date_of_birth" type="xs:date" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="description" type="xs:string"/>
+      <xs:element name="quote" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+
+      <xs:element name="social" type="describableType" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="link" type="describableType" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="video" type="describableType" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="image" type="describableType" minOccurs="0" maxOccurs="unbounded" />
+
+      <xs:element name="related_person" type="personIdType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="crisis" type="crisisIdType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="organization" type="organizationIdType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="organizationType">
+    <xs:sequence>
+      <xs:element name="id" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="name" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="kind" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="location" type="locationType" minOccurs="0" />
+
+      <xs:element name="description" type="xs:string"/>
+      <xs:element name="history" type="xs:string" minOccurs="0"/>
+      <xs:element name="contact_info" type="xs:string" minOccurs="0"/>
+
+      <xs:element name="social" type="describableType" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="link" type="describableType" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="video" type="describableType" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="image" type="describableType" minOccurs="0" maxOccurs="unbounded" />
+
+      <xs:element name="person" type="personIdType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="crisis" type="crisisIdType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="related_organization" type="organizationIdType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
