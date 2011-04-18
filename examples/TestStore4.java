@@ -1,12 +1,12 @@
 // ---------------
-// TestStore3.java
+// TestStore4.java
 // ---------------
 
 import junit.framework.Assert;
 import junit.framework.TestCase;
 
 // ----------
-// TestStore3
+// TestStore4
 // ----------
 
 public final class TestStore4 extends TestCase {
