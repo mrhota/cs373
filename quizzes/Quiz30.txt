@@ -1,0 +1,36 @@
+CS373: Quiz #30 (5 pts)
+
+--------------------------------------------------------------------------
+1. As described in Paper #9: Gender Differences in Computer Science
+   Students, which of the following statements was found to be true?
+   (1 pt)
+
+a. Gender discrimination is perceived as a significant problem in CS
+   departments.
+
+b. Female CS majors had less confidence with computers than did male
+   non-majors.
+
+c. Study participants did not view CS as a field in which career
+   goals and family life were compatible.
+
+d. A difference in quantitative ability between gender does explain
+   some of the gender difference in CS enrollment.
+
+b
+
+--------------------------------------------------------------------------
+2. In Java can the access to a member in a derived class be wider relative
+   to its access in a base class?
+   (1 pt)
+
+yes
+
+--------------------------------------------------------------------------
+3. In Java under what FOUR conditions is dynamic binding disabled?
+   (2 pts)
+
+final class
+final method
+static method
+private method
