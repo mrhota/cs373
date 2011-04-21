@@ -1,0 +1,12 @@
+CS373: Quiz #31 (5 pts)
+
+--------------------------------------------------------------------------
+1. In Java describe the consequences of marking a method "abstract".
+   (4 pts)
+
+the base class must be marked abstract
+
+the method must be defined by the derived class or the derived class must
+be marked abstract
+
+the method can not be defined in the base class
