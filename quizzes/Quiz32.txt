@@ -1,0 +1,19 @@
+CS373: Quiz #32 (5 pts)
+
+--------------------------------------------------------------------------
+1. In the video store refactoring Fowler used Replace Type Code with
+   State / Strategy. An alternative would have been Replace Type Code with
+   Subclasses. How would that have been different? Why didn't he do it?
+   [http://www.refactoring.com/catalog/replaceTypeCodeWithStateStrategy.html]
+   [http://www.refactoring.com/catalog/replaceTypeCodeWithSubclasses.html]
+   (2 pts)
+
+RegularMovie, NewReleaseMovie, ChildrensMovie
+Can't change type easily.
+
+--------------------------------------------------------------------------
+2. Fowler moved the switch statement from Movie.getCharge() to
+   Movie.Movie(). What's the significance of that?
+   (2 pts)
+
+The switch only runs once per Movie creation.
