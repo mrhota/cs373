@@ -118,6 +118,10 @@ class Rental {
     public int getFrequentRenterPoints () { // const
         return _movie.getFrequentRenterPoints(_daysRented);}
 
+    /**
+     * _movie
+     *     statement()
+     */
     public String statement () { // const
         return _movie.statement(_daysRented);}}
 
