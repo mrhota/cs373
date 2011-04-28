@@ -1,0 +1,8 @@
+CS373: Quiz #35 (5 pts)
+
+--------------------------------------------------------------------------
+1. In the maze example what two concerns did the Factory Method design
+   pattern separate?
+   (4 pts)
+
+the structure of the maze from the types of the components of the maze
