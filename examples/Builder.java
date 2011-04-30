@@ -22,7 +22,7 @@ class EnchantedDoor extends Door {
     public EnchantedDoor (Room r, Room s) {
         super(r, s);}}
 
-class Maze {
+final class Maze {
     private List<Room> _rooms = new ArrayList<Room>();
     private List<Door> _doors = new ArrayList<Door>();
 
@@ -60,7 +60,7 @@ class EnchantedMazeBuilder extends MazeBuilder {
     public void buildDoor (Room r, Room s) {
         _maze.addDoor(new EnchantedDoor(r, s));}}
 
-class Game {
+abstract class Game {
     public static Maze createMaze (MazeBuilder mb) {
         mb.buildRoom();
         mb.buildRoom();
@@ -84,7 +84,7 @@ final class Builder {
 
         {
         MazeBuilder mb = new EnchantedMazeBuilder();
-        Maze        m  = Game.createMaze(new EnchantedMazeBuilder());
+        Maze        m  = Game.createMaze(mb);
         assert mb.getClass()        == EnchantedMazeBuilder.class;
         assert m.getClass()         == Maze.class;
         assert m.room(0).getClass() == EnchantedRoom.class;

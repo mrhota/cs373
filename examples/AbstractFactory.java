@@ -22,7 +22,7 @@ class EnchantedDoor extends Door {
     public EnchantedDoor (Room r, Room s) {
         super(r, s);}}
 
-class Maze {
+final class Maze {
     private List<Room> _rooms = new ArrayList<Room>();
     private List<Door> _doors = new ArrayList<Door>();
 
@@ -52,7 +52,7 @@ class EnchantedMazeFactory extends MazeFactory {
     public EnchantedDoor makeDoor (Room r, Room s) {
         return new EnchantedDoor(r, s);}}
 
-class Game {
+abstract class Game {
     public static Maze createMaze (MazeFactory mf) {
         Maze m = new Maze();
         m.addRoom(mf.makeRoom());

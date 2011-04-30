@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /*
+interface Cloneable {}
+
 class Object {
     protected Object clone () throws CloneNotSupportedException {
         if (!(this instanceof Cloneable))
@@ -42,7 +44,7 @@ class Door implements Cloneable {
 class EnchantedDoor extends Door
     {}
 
-class Maze {
+final class Maze {
     private List<Room> _rooms = new ArrayList<Room>();
     private List<Door> _doors = new ArrayList<Door>();
 
@@ -74,7 +76,7 @@ class MazePrototype {
         d.set(r, s);
         return d;}}
 
-class Game {
+abstract class Game {
     public static Maze createMaze (MazePrototype mp) {
         Maze m = new Maze();
         m.addRoom(mp.makeRoom());

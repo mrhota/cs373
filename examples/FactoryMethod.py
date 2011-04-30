@@ -54,7 +54,7 @@ class Game (object) :
     def make_door (self, r, s) :
         return Door(r, s)
 
-class EnchantedGame (Game) :                             # object?
+class EnchantedGame (Game) :
     def make_room (self) :
         return EnchantedRoom()
 
@@ -64,15 +64,15 @@ class EnchantedGame (Game) :                             # object?
 print "FactoryMethod.py"
 
 g = Game()
-assert type(g)         is Game
 m = g.create_maze()
+assert type(g)         is Game
 assert type(m)         is Maze
 assert type(m.room(0)) is Room
 assert type(m.door(0)) is Door
 
 g = EnchantedGame()
-assert type(g)         is EnchantedGame
 m = g.create_maze()
+assert type(g)         is EnchantedGame
 assert type(m)         is Maze
 assert type(m.room(0)) is EnchantedRoom
 assert type(m.door(0)) is EnchantedDoor

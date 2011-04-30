@@ -51,7 +51,7 @@ class MazeBuilder (object) :
     def maze (self) :
         return self.__maze
 
-class EnchantedMazeBuilder (MazeBuilder) :                # object?
+class EnchantedMazeBuilder (MazeBuilder) :
     def __init__ (self) :
         MazeBuilder.__init__(self)
 
