@@ -60,7 +60,7 @@ final class Maze {
     public Door door (int i) {
         return _doors.get(i);}}
 
-class MazePrototype {
+final class MazePrototype {
     private Room _room;
     private Door _door;
 
