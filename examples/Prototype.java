@@ -19,9 +19,9 @@ class Object {
 */
 
 class Room implements Cloneable {
-    public Object clone () {
+    public Room clone () {
         try {
-            return super.clone();}
+            return (Room) super.clone();}
         catch (CloneNotSupportedException e) {
             return null;}}}
 
@@ -31,9 +31,9 @@ class Door implements Cloneable {
     private Room _r;
     private Room _s;
 
-    public Object clone () {
+    public Door clone () {
         try {
-            return super.clone();}
+            return (Door) super.clone();}
         catch (CloneNotSupportedException e) {
             return null;}}
 
@@ -69,10 +69,10 @@ final class MazePrototype {
         _door = door;}
 
     public Room makeRoom () {
-        return (Room) _room.clone();}
+        return _room.clone();}
 
     public Door makeDoor (Room r, Room s) {
-        Door d = (Door) _door.clone();
+        Door d = _door.clone();
         d.set(r, s);
         return d;}}
 
